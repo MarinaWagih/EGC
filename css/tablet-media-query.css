@@ -1,0 +1,12 @@
+@media (max-width:991px) {
+  #t2:target #p2, #t3:target #p3, #t4:target #p4 {
+    transform: translateX(-191%);
+    -webkit-transform: translateX(-191%);
+    -moz-transform: translateX(-191%);
+    -o-transform: translateX(-191%);
+    transition-delay: .4s !important;
+  }
+  ul {
+      width: 8.5%;
+  }
+}

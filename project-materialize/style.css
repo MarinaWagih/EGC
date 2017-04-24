@@ -1,0 +1,23 @@
+.sara {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0.625rem;
+  -webkit-transform: scale(0.9) rotate(-3deg);
+  -ms-transform: scale(0.9) rotate(-3deg);
+  transform: scale(0.9) rotate(-3deg);
+  transition: opacity 1s ease-in 0s, width 2s ease-in 2s;
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+.sara::after {
+  clear: both;
+  content: "";
+  display: table;
+}

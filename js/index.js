@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function(){
         contentType: 'html', // or text
         // defaults to null for infinite loop
         loopCount: null,
-        callback: function(){ foo(); },
+        // callback: function(){ foo(); },
         resetCallback: function() { newTyped(); }
     });
 
