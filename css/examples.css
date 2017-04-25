@@ -10,7 +10,7 @@ a{
 	text-decoration:none;
 }
 table {
-    border-spacing: 0;    
+    border-spacing: 0;
 }
 fieldset,img {
     border: 0;
@@ -48,12 +48,12 @@ abbr,acronym { border: 0;
 /* Custom CSS
  * --------------------------------------- */
 body{
-	font-family: arial,helvetica;
+	font-family: 'Source Sans Pro', sans-serif;
 	color: #333;
 	color: rgba(0,0,0,0.5);
 }
 h1{
-	font-size: 6em;	
+	font-size: 6em;
 }
 p{
 	font-size: 2em;
@@ -68,8 +68,8 @@ p{
 	color: #000;
 	background:#fff;
 	background: rgba(255,255,255, 0.3);
-	-webkit-border-radius: 10px; 
-			border-radius: 10px; 
+	-webkit-border-radius: 10px;
+			border-radius: 10px;
 }
 #menu li.active{
 	background:#666;
@@ -120,7 +120,7 @@ p{
 }
 #infoMenu li a{
 	display: block;
-	margin: 0 22px 0 0;	
+	margin: 0 22px 0 0;
 	color: #333;
 }
 #infoMenu li a:hover{
@@ -173,6 +173,65 @@ p{
 	padding: 0 0 5px 0;
 }
 
+/*==================*/
+/* ---- canvas ---- */
+
+canvas {
+    display: block;
+    vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /*background-color: #b61924;*/
+    /*background: linear-gradient(45deg, rgba(102, 0, 102, 1) 0%, rgba(157, 33, 99, 1) 18%, rgba(204, 0, 102, 1) 35%, rgba(204, 0, 102, 1) 66%, rgba(157, 33, 99, 1) 100%);*/
+
+}
+
+/* ---- stats.js ---- */
+
+
+
+.js-count-particles{
+    font-size: 1.1em;
+}
+
+#stats,
+.count-particles{
+    -webkit-user-select: none;
+}
+
+#stats{
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+}
+
+.count-particles{
+    border-radius: 0 0 3px 3px;
+}
+/*===============================*/
+
+#typed{
+    font-size: 20px;
+    color: #233237;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /*dim the background*/
+}
+.typed-cursor {
+    font-size: 20px;
+    color: #233237;
+}
+/*========================================*/
 /* Demos Menu
  * --------------------------------------- */
  #demosMenu{
@@ -181,4 +240,235 @@ p{
 	right:10px;
 	z-index: 999;
  }
+/*============================================*/
 
+/*
+background-color: #985E6D;
+background-color: #a87781;
+background-color: #b99199;
+background-color: #CDA34E;
+background-color: #eac67a;
+color: #fff;
+ '#0a3150',
+color: #233237;
+color: #326292;
+*/
+
+/*============================================*/
+/*sections-backgrounds*/
+
+#right1{
+      /*background: url(../images/blue-dark.jpg) center;*/
+      background-image: url(../images/net.png);
+      background-repeat: no-repeat;
+      /*background-position: 50%;*/
+      text-align: center;
+      /*background-color: #18121e !important;*/
+      /*background-color: #e8e1d8 !important;*/
+      /*background-color: #e8e8e8 !important;*/
+      /*background-color: #d8d8d8 !important;*/
+      background-color:#afb0b5 !important;
+
+      /*background-color: #274c5d !important;*/
+      background-size: contain;
+      /*top: 50%;*/
+      background-position: 50%;
+
+}
+#left2{
+  background-color: #e8e8e8 !important;
+}
+
+#left3{
+  background-color: #233237 !important;
+}
+#right4{
+  background-color: #274c5d !important;
+}
+
+.intro-sec {
+     /*position: absolute;
+     top: 50%;
+     transform: translateY(-50%);*/
+     position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 1;
+    top: 50%;
+ }
+.bg-white{
+  background: #fff;
+}
+.width-30{
+  width: 30%;
+}
+.line-height-normal{
+      line-height: normal;
+}
+#typed-strings p {
+    font-size: 5em;
+    text-align: left;
+    padding-left: 30px;
+    font-weight: bold;
+}
+
+/*logo-in center section3*/
+
+#left1 .intro, #left2 .intro, #left3 .intro, #left4 .intro{
+    width: 100%;
+    text-align: center;
+    left: 50%;
+}
+
+#right1 .intro ,#right2 .intro ,#right3 .intro ,#right4 .intro {
+    width: 100%;
+    text-align: center;
+    right: 50%;
+}
+.intro p{
+    text-align: center;
+    color: #274c5d;
+}
+#left1 .intro, #left2 .intro, #left3 .intro, #left4 .intro,
+#right1 .intro ,#right2 .intro ,#right3 .intro ,#right4 .intro  {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#left1 , #left2 , #left3, #left4 ,
+#right1 ,#right2 ,#right3,#right4 {
+    overflow: hidden;
+}
+
+.icon-big{
+  font-size: 12em;
+  color: #eac67a;
+}
+.icon-contact {
+    font-size: 12em;
+    color: #fff;
+}
+.egc-contact{
+  color: #fff;
+  font-size: 1.5em;
+  padding: 5rem;
+  text-align: center;
+}
+#right3 p{
+  font-size: 1.5em;
+  padding-left: 4rem;
+  padding-right: 3rem;
+}
+#left3 .about-us{
+  font-size: 1.5em;
+  padding: 5rem;
+  text-align: center;
+}
+
+/*section cards pricing*/
+.egc-golden{
+  color:#eac67a !important;
+}
+.egc-rusty-red{
+  /*color:#B99199 !important;*/
+  color:#985E6D !important;
+}
+.egc-blue{
+  color: #326292 !important;
+}
+.tabs .indicator {
+background-color: #326292;
+}
+blockquote{
+  border-left:5px solid #B99199 !important;
+  margin: 10px 0  !important;
+}
+.icon-pricing {
+  font-size: 35px;
+  padding: 20px;
+  display: block;
+  text-align: center;
+  /*background-color: #b99199;*/
+  background-color: #eac67a;
+  color: #fff;
+  color: #233237;
+}
+.price{
+  font-size: 20px;
+  vertical-align: top;
+}
+.price .material-icons {
+  line-height: 1.2;
+}
+.card-image {
+background-color: #eac67a;
+}
+.tabs .tab a {
+    font-size: 16px !important;
+}
+.tabs .tab a:hover, .tabs .tab a.active{
+  color:#233237 !important;
+}
+
+#typed-strings .egc-name{
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 5em;
+  text-transform:uppercase;
+}
+.font-140{
+  font-size: 140px;
+}
+.text-shadow {
+  text-shadow: 0 0 7px #9e9e9e;
+}
+.social-facebook{
+  background-color: #3b5998;
+}
+.social-twitter{
+  background-color: #00aced;
+}
+.social-facebook:hover,.social-facebook:active {
+  background-color: #324b80;
+}
+.social-twitter:hover,.social-twitter:active {
+    background-color: #0094cc;
+}
+/*=================menu======================*/
+#menu {
+  position: fixed;
+  z-index: 100;
+  margin-top: -32px;
+  top: 38%;
+  opacity: 1;
+  left: 17px;
+  float: left !important;
+  width: initial;
+}
+#menu li{
+    display: block;
+    border-radius: 0px;
+    margin: 2px;
+}
+/*mobile*/
+@media (max-width:800px){
+  #typed-strings .egc-name {
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 4em;
+    text-transform: uppercase;
+}
+}
+@media(max-width:500px){
+.icon-pricing {
+  font-size: 165px;
+  padding: 10px;
+}
+.ms-right {
+    width: 100% !important;
+}
+.ms-left {
+    width: 100% !important;
+}
+}
