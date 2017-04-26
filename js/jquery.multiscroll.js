@@ -95,7 +95,14 @@
 			nav.addClass(options.navigationPosition);
 		}
 
-		$('.ms-right, .ms-left').css({
+		$('.ms-right').css({
+			'width': '50%',
+			'position': 'absolute',
+			'height': '100%',
+			'-ms-touch-action': 'none'
+		});
+
+		$('.ms-left').css({
 			'width': '50%',
 			'position': 'absolute',
 			'height': '100%',

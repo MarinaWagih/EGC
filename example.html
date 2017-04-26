@@ -18,7 +18,7 @@
 	<link rel="stylesheet" type="text/css" href="css/jquery.multiscroll.css"/>
 	<link rel="stylesheet" type="text/css" href="css/examples.css"/>
 </head>
-<body>
+<body class="ms-viewing-first section1-loaded">
 
 
 <ul id="menu">
@@ -36,11 +36,17 @@
 </li>
 	<li data-menuanchor="third">
 		<a href="#third">
+			<!-- <i class="material-icons">monetization_on</i> -->
+			<i class="material-icons">attach_money</i>
+	</a>
+</li>
+	<li data-menuanchor="fourth">
+		<a href="#fourth">
 			<i class="material-icons">info_outline</i>
 		</a>
 	</li>
-	<li data-menuanchor="fourth">
-		<a href="#fourth">
+	<li data-menuanchor="fifth">
+		<a href="#fifth">
 		<!-- <i class="material-icons">pin_drop</i> -->
 		<i class="material-icons">person_pin</i>
 		<!-- <i class="material-icons">phone</i> -->
@@ -54,137 +60,148 @@
 	</div> -->
 	<div class="ms-left">
 		<div class="ms-section" id="left1">
-			<!-- <div id="particles-js"></div> -->
-			<!-- <div class="hint">
-				 <div class="wrap">
-						 <div class="type-wrap">
-								 <div id="typed-strings">
-										 <p>type your slogan here</p>
-								 </div>
-								 <span id="typed" style="white-space:pre;"></span>
-						 </div>
-				 </div>
-			</div> -->
 			<div class="intro">
 				<div class="intro-sec">
 					<img src="images/logo-EGC-04-shadow.png" class="">
 				</div>
-				<div class="hint">
-					 <div class="wrap">
-							 <div class="type-wrap">
-									 <div id="typed-strings">
-											 <p class="egc-name text-shadow">technologie informarique</p>
-									 </div>
-									 <span id="typed" style="white-space:pre;"></span>
-							 </div>
-					 </div>
-				</div>
+        <div class="hint">
+           <div class="wrap">
+               <div class="type-wrap">
+                   <div id="typed-strings">
+                       <p class="egc-name text-shadow">type your slogan here</p>
+                   </div>
+                   <span id="typed"></span>
+               </div>
+           </div>
+        </div>
 			</div>
-
-			<!-- <h1>Left 1</h1> -->
 		</div>
-
+    <div class="ms-section" id="left3">
+      <div class="intro">
+        <div class="intro-sec">
+          <img src="images/logo-EGC-03.png" class="width-30">
+        </div>
+      </div>
+      <div class="row container">
+          <div class="col s12 m12">
+            <div class="card horizontal">
+              <div class="card-stacked">
+                <div class="card-tabs">
+                  <ul class="tabs tabs-fixed-width border-bottom">
+                    <li class="tab">
+                      <i class="material-icons icon-pricing-tab">router</i>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-tabs">
+                  <ul class="tabs tabs-fixed-width border-bottom">
+                    <li class="tab">
+                      <a href="#" class="card-title activator egc-rusty-red bold">INTERNET</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-tabs">
+                  <ul class="tabs tabs-fixed-width border-bottom">
+                    <li class="tab"><a class="active egc-blue bold" href="">CABLE</a></li>
+                  </ul>
+                </div>
+                <div class="card-content">
+                  <div id="">
+                     <blockquote class="grey-text text-darken-4">
+                       EXPERIENCE THE SEAMLESS BROWSING AT HIGH SPEED CABLE INTERNET, STARTING FROM
+                       <span class="egc-golden price bold"><br><i class="material-icons">monetization_on</i> 24.99/Month</span>
+                     </blockquote>
+                  </div>
+                </div>
+                <div class="card-tabs">
+                  <ul class="tabs tabs-fixed-width border-bottom border-top">
+                    <li class="tab"><a class="egc-blue bold" href="">DSL/FTTN</a></li>
+                  </ul>
+                </div>
+                <div class="card-content">
+                  <div id="">
+                     <blockquote class="grey-text text-darken-4">
+                       GET CONSISTENT BANDWIDTH WITH HIGH SPEED DSL INTERNET, STARTING FROM
+                       <span class="egc-golden price bold"><br><i class="material-icons">monetization_on</i> 29.99/Month</span>
+                    </blockquote>
+                  </div>
+                </div>
+                </div>
+              </div>
+          </div>
+        </div>
+    </div>
 		<div class="ms-section" id="left2">
-			<div class="row container">
-				<div class="col s12 m12">
-					<div class="card small">
-						<div class="card-image waves-effect waves-block waves-light">
-							<i class="material-icons icon-pricing font-140">router</i>
-							<!-- <img class="activator" src="http://materializecss.com/images/office.jpg"> -->
-						</div>
-						<div class="card-content">
-							<span class="card-title activator egc-rusty-red bold">INTERNET
-								<i class="material-icons right">more_vert</i>
-							</span>
-							<!-- <p><a href="#">This is a link</a></p> -->
-						</div>
-						<div class="card-reveal">
-								<span class="card-title  egc-rusty-red bold">INTERNET
-									<i class="material-icons right">close</i>
-								</span>
-							<!-- <p>Here is some more information about this product that is only
-							revealed once clicked on.</p> -->
-								<div class="card-tabs">
-									<ul class="tabs tabs-fixed-width">
-										<li class="tab"><a class="active egc-blue bold" href="#test1">CABLE</a></li>
-										<li class="tab"><a class="egc-blue bold" href="#test2">DSL/FTTN</a></li>
-									</ul>
-								</div>
-								<div class="card-content">
-									<div id="test1">
-										 <blockquote class="grey-text text-darken-4">
-											 EXPERIENCE THE SEAMLESS BROWSING AT HIGH SPEED CABLE INTERNET, STARTING FROM
-											 <span class="egc-golden price bold"><br><i class="material-icons">monetization_on</i> 24.99/Month</span>
-										 </blockquote>
-									</div>
-									<div id="test2">
-										 <blockquote class="grey-text text-darken-4">
-											 GET CONSISTENT BANDWIDTH WITH HIGH SPEED DSL INTERNET, STARTING FROM
-											 <span class="egc-golden price bold"><br><i class="material-icons">monetization_on</i> 29.99/Month</span>
-										</blockquote>
-									</div>
-								</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col s12 m12">
-					<div class="card small">
-						<div class="card-image waves-effect waves-block waves-light">
-							<i class="material-icons icon-pricing font-140">ring_volume</i>
-							<!-- <img class="activator" src="http://materializecss.com/images/office.jpg"> -->
-						</div>
-						<div class="card-content">
-							<span class="card-title activator egc-rusty-red bold">PHONE
-								<i class="material-icons right">more_vert</i>
-							</span>
-							<!-- <p><a href="#">This is a link</a></p> -->
-						</div>
-						<div class="card-reveal">
-							<span class="card-title egc-rusty-red bold">PHONE
-								<i class="material-icons right">close</i>
-							</span>
-							<!-- <p>Here is some more information about this product that
-								is only revealed once clicked on.</p> -->
-								<div class="card-tabs">
-									<ul class="tabs tabs-fixed-width">
-										<li class="tab"><a class="active egc-blue bold" href="#test3">VOIP / LANDLINE</a></li>
-										<li class="tab"><a class="egc-blue bold" href="#test4">EMAIL TO FAX</a></li>
-									</ul>
-								</div>
-								<div class="card-content">
-									<div id="test3">
-										 <blockquote class="grey-text text-darken-4">
-											 WE OFFERS A QUALITY INTERNET PHONE CALL SERVICE. THE CHEAPEST WAY TO MAKE CALLS STARTING FROM
-											 <span class="egc-golden price bold"><br><i class="material-icons">monetization_on</i> 9.99/Month</span>
-										 </blockquote>
-									</div>
-									<div id="test4">
-									 <blockquote class="grey-text text-darken-4">
-										 OUR E-MAIL BASED FAX SERVICE ALLOWS YOU TO RECEIVE, SEND, OR BROADCAST FAXES SECURELY
-										 <span class="egc-golden price bold"><br><i class="material-icons">monetization_on</i> 14.99/Month</span>
-									</blockquote>
-									</div>
-								</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="ms-section" id="left3">
-			<i class="material-icons icon-big">info_outline</i>
-			<p class="about-us egc-golden">
-				ABOUT US
-			</p>
-			<div class="intro">
+      <div class="intro">
 				<div class="intro-sec">
-					<img src="images/logo-EGC-03.png" class="bg-white z-depth-2 width-30">
+					<img src="images/logo-EGC-03.png" class="">
+				</div>
+			</div>
+      <div class="row">
+				<div class="col s12 m12">
+          <div class="card horizontal">
+            <div class="card-image">
+              <i class="material-icons icon-pricing-lang">language</i>
+            </div>
+            <div class="card-stacked">
+              <div class="card-action border-bottom">
+                <span class="card-title activator egc-rusty-red bold">INTERNET & PHONE
+                </span>
+              </div>
+              <div class="card-tabs">
+                <ul class="tabs tabs-fixed-width border-bottom">
+                  <li class="tab"><a class="active egc-blue bold" href="#">CABLE + VOIP <br> / LANDLINE</a></li>
+                </ul>
+              </div>
+
+              <div class="card-content">
+                <div id="">
+                   <blockquote class="grey-text text-darken-4">
+                     EXPERIENCE THE SEAMLESS BROWSING AT HIGH SPEED CABLE INTERNET, STARTING FROM
+                     <span class="egc-golden price bold"><br><i class="material-icons">monetization_on</i> 24.99/Month</span>
+                   </blockquote>
+                </div>
+              </div>
+              <div class="card-tabs">
+                <ul class="tabs tabs-fixed-width border-bottom border-top">
+                  <li class="tab"><a class="egc-blue bold" href="#">DSL + VOIP <br> / LANDLINE</a></li>
+                </ul>
+              </div>
+              <div class="card-content">
+                <div id="">
+                 <blockquote class="grey-text text-darken-4">
+                   GET CONSISTENT BANDWIDTH WITH HIGH SPEED DSL INTERNET, STARTING FROM
+                   <span class="egc-golden price bold"><br><i class="material-icons">monetization_on</i> 29.99/Month</span>
+                </blockquote>
+                </div>
+              </div>
+
+            </div>
+          </div>
 				</div>
 			</div>
 		</div>
+
 
 		<div class="ms-section" id="left4">
+			<i class="material-icons icon-big egc-blue">info_outline</i>
+			<p class="about-us egc-blue">
+				ABOUT US
+			</p>
+      <div class="intro">
+				<div class="intro-sec">
+					<img src="images/logo-EGC-03.png" class="">
+				</div>
+			</div>
+      <p>
+				Lorem ipsum dolor sit amet, meis cetero referrentur ius ut, ne virtute detracto mea.
+				Eu nec facer nostro similique, est ad legere accumsan. In nulla dicam graecis vim,
+				dicunt facilisi ut sea. Eu tation facete duo, choro dolorum eos no. Partiendo deseruisse nec ei,
+				et legimus vulputate eam. Ad delenit lucilius delicatissimi vim.
+			</p>
+		</div>
+
+		<div class="ms-section" id="left5">
 			<!-- <img src="images/logo-EGC-03.png" class=""> -->
 			<a class="btn-floating btn-large waves-effect waves-light social-facebook"><i class="fa fa-facebook"></i></a>
 			<a class="btn-floating btn-large waves-effect waves-light social-twitter"><i class="fa fa-twitter"></i></a>
@@ -198,88 +215,138 @@
 				<div class="intro-sec">
 					<img src="images/logo-EGC-04-shadow.png" class="">
 				</div>
-				<div class="hint">
-					 <div class="wrap">
-							 <div class="type-wrap">
-									 <div id="typed-strings">
-											 <p class="egc-name text-shadow">technologie informarique</p>
-									 </div>
-									 <span id="typed" style="white-space:pre;"></span>
-							 </div>
-					 </div>
-				</div>
+        <div class="hint">
+           <div class="wrap">
+               <div class="type-wrap">
+                   <div id="typed-strings">
+                       <!-- <p class="egc-name text-shadow">type your slogan here</p> -->
+                   </div>
+                   <span id="typed"></span>
+               </div>
+           </div>
+        </div>
 			</div>
 		</div>
 
-		<div class="ms-section" id="right2">
-			<div class="row container">
-				<div class="col s12 m12">
-					<div class="card horizontal">
-						<div class="card-image">
-							<i class="material-icons icon-pricing">language</i>
-						</div>
-						<div class="card-stacked">
-							<!-- <div class="card-tabs">
-								<ul class="collapsible popout" data-collapsible="accordion">
-								    <li>
-								      <div class="collapsible-header"><i class="material-icons">filter_drama</i></div>
-								      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-								    </li>
-								    <li>
-								      <div class="collapsible-header"><i class="material-icons">place</i></div>
-								      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-								    </li>
-								    <li>
-								      <div class="collapsible-header"><i class="material-icons">whatshot</i></div>
-								      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-								    </li>
-								  </ul>
-							</div> -->
-							<div class="card-tabs">
-								<ul class="tabs tabs-fixed-width">
-									<li class="tab"><a class="active egc-blue bold" href="#test8">CABLE + VOIP <br> / LANDLINE</a></li>
-									<li class="tab"><a class="egc-blue bold" href="#test9">DSL + VOIP <br> / LANDLINE</a></li>
-								</ul>
-							</div>
-							<div class="card-content">
-								<div id="test8">
-									 <blockquote class="grey-text text-darken-4">
-										 EXPERIENCE THE SEAMLESS BROWSING AT HIGH SPEED CABLE INTERNET, STARTING FROM
-										 <span class="egc-golden price bold"><br><i class="material-icons">monetization_on</i> 24.99/Month</span>
-									 </blockquote>
-								</div>
-								<div id="test9">
-								 <blockquote class="grey-text text-darken-4">
-									 GET CONSISTENT BANDWIDTH WITH HIGH SPEED DSL INTERNET, STARTING FROM
-									 <span class="egc-golden price bold"><br><i class="material-icons">monetization_on</i> 29.99/Month</span>
-								</blockquote>
-								</div>
-							</div>
-							<div class="card-action">
-								<span class="card-title activator egc-rusty-red bold">INTERNET & PHONE
-								</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-	</div>
 
 		<div class="ms-section" id="right3">
-			<div class="intro">
+      <div class="intro">
+        <div class="intro-sec">
+          <img src="images/logo-EGC-03.png" class="width-30">
+        </div>
+      </div>
+      <div class="row container">
+          <div class="col s12 m12">
+            <div class="card horizontal">
+              <div class="card-stacked">
+                <div class="card-tabs">
+                  <ul class="tabs tabs-fixed-width border-bottom">
+                    <li class="tab">
+                      <i class="material-icons icon-pricing-tab">ring_volume</i>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-tabs">
+                  <ul class="tabs tabs-fixed-width border-bottom">
+                    <li class="tab">
+                      <a href="#" class="card-title activator egc-rusty-red bold">PHONE</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-tabs">
+                  <ul class="tabs tabs-fixed-width border-bottom">
+                    <li class="tab"><a class="active egc-blue bold" href="#">VOIP / LANDLINE</a></li>
+                  </ul>
+                </div>
+                <div class="card-content">
+                  <div id="">
+                     <blockquote class="grey-text text-darken-4">
+                       WE OFFERS A QUALITY INTERNET PHONE CALL SERVICE. THE CHEAPEST WAY TO MAKE CALLS STARTING FROM
+                       <span class="egc-golden price bold"><br><i class="material-icons">monetization_on</i> 9.99/Month</span>
+                     </blockquote>
+                  </div>
+                </div>
+                <div class="card-tabs">
+                  <ul class="tabs tabs-fixed-width border-bottom border-top">
+                    <li class="tab"><a class="egc-blue bold" href="#">EMAIL TO FAX</a></li>
+                  </ul>
+                </div>
+                <div class="card-content">
+                  <div id="">
+                     <blockquote class="grey-text text-darken-4">
+                       OUR E-MAIL BASED FAX SERVICE ALLOWS YOU TO RECEIVE, SEND, OR BROADCAST FAXES SECURELY
+                       <span class="egc-golden price bold"><br><i class="material-icons">monetization_on</i> 14.99/Month</span>
+                    </blockquote>
+                  </div>
+                </div>
+
+                </div>
+
+              </div>
+          </div>
+        </div>
+	 </div>
+   <div class="ms-section" id="right2">
+     <div class="intro">
+       <div class="intro-sec">
+         <img src="images/logo-EGC-03.png" class="">
+       </div>
+     </div>
+
+     <div class="row">
+       <div class="col s12 m12">
+         <div class="card horizontal">
+           <div class="card-image">
+             <i class="material-icons icon-pricing-lang">language</i>
+           </div>
+           <div class="card-stacked">
+             <div class="card-action border-bottom">
+               <span class="card-title activator egc-rusty-red bold">INTERNET & PHONE
+               </span>
+             </div>
+             <div class="card-tabs">
+               <ul class="tabs tabs-fixed-width border-bottom">
+                 <li class="tab"><a class="active egc-blue bold" href="#">CABLE + VOIP <br> / LANDLINE</a></li>
+               </ul>
+             </div>
+
+             <div class="card-content">
+               <div id="">
+                  <blockquote class="grey-text text-darken-4">
+                    EXPERIENCE THE SEAMLESS BROWSING AT HIGH SPEED CABLE INTERNET, STARTING FROM
+                    <span class="egc-golden price bold"><br><i class="material-icons">monetization_on</i> 39.99/Month</span>
+                  </blockquote>
+               </div>
+             </div>
+             <div class="card-tabs">
+               <ul class="tabs tabs-fixed-width border-bottom border-top">
+                 <li class="tab"><a class="egc-blue bold" href="#">DSL + VOIP <br> / LANDLINE</a></li>
+               </ul>
+             </div>
+             <div class="card-content">
+               <div id="">
+                <blockquote class="grey-text text-darken-4">
+                  GET CONSISTENT BANDWIDTH WITH HIGH SPEED DSL INTERNET, STARTING FROM
+                  <span class="egc-golden price bold"><br><i class="material-icons">monetization_on</i> 44.98/Month</span>
+               </blockquote>
+               </div>
+             </div>
+
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+		<div class="ms-section" id="right4">
+      <div class="intro">
 				<div class="intro-sec">
-					<img src="images/logo-EGC-03.png" class="bg-white z-depth-2 width-30">
+					<img src="images/logo-EGC-03.png" class="">
 				</div>
 			</div>
-			<p>
-				Lorem ipsum dolor sit amet, meis cetero referrentur ius ut, ne virtute detracto mea.
-				Eu nec facer nostro similique, est ad legere accumsan. In nulla dicam graecis vim,
-				dicunt facilisi ut sea. Eu tation facete duo, choro dolorum eos no. Partiendo deseruisse nec ei,
-				et legimus vulputate eam. Ad delenit lucilius delicatissimi vim.
-			</p>
+
 		</div>
 
-		<div class="ms-section" id="right4">
+		<div class="ms-section" id="right5">
 			<i class="material-icons icon-contact">person_pin</i>
 			<p class="about-us egc-contact">
 				CONTACT US
@@ -301,13 +368,39 @@
 <script>
  $(document).ready(function() {
 					$('#myContainer').multiscroll({
-						sectionsColor: ['#eac67a', '#b99199', '#e8e8e8', '#e8e8e8'],
-						anchors: ['first', 'second', 'third', 'fourth'],
+						// sectionsColor: ['#233237', '#b99199','#eac67a', '#e8e8e8', '#e8e8e8'],
+						sectionsColor: ['#233237', '#fff', '#fff','#234465','rgb(240, 215, 162)', '#e8e8e8', '#e8e8e8'],
+						anchors: ['first', 'second', 'third', 'fourth', 'fifth'],
 						menu: '#menu',
 						navigation: true,
-						navigationTooltips: ['Home', 'Pricing', 'Abou us', 'Contact us'],
+						navigationTooltips: ['Home', 'Pricing', 'Pricing', 'About us', 'Contact us'],
 						loopBottom: true,
-						loopTop: true
+						loopTop: true,
+            css3:true,
+
+                responsiveWidth: 1000,
+                responsiveExpand: true,
+                responsiveExpandKey: 'YWx2YXJvdHJpZ28uY29tX3IxaGNtVnpjRzl1YzJsMlpVVjRjR0Z1WkE9PWo4Mw==',
+
+                afterResponsive: function(){
+                    console.log("after responsive...");
+                },
+                onLeave: function(index, nextIndex, direction){
+                    console.log("onLeave: index:" + index + " nextIndex:" + nextIndex + " direction:"+direction);
+                    if(index ===1){
+                        $('.section1').addClass('hideOverflow');
+                        $('body').removeClass('section1-loaded');
+                    }
+                },
+                afterLoad: function(anchorLink, index){
+                    if(index === 1){
+                        $('.section1').removeClass('hideOverflow');
+                        $('body').addClass('section1-loaded');
+                    }
+                },
+                afterRender: function(){
+                    $('body').addClass('section1-loaded');
+                }
 					});
 			});
 	</script>

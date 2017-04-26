@@ -60,21 +60,21 @@ html, body {
 #multiscroll-nav li a{
     display: block;
     position: relative;
-    z-index: 1;
+    z-index: 4;
     width: 100%;
     height: 100%;
     cursor: pointer;
     text-decoration: none;
 }
 #multiscroll-nav li .active span{
-    background: #333;
+    background: #985f6e;
 }
 #multiscroll-nav span{
     top: 2px;
     left: 2px;
     width: 10px;
     height: 10px;
-    border: 1px solid #000;
+    border: 1px solid #985f6e;
     background: rgba(0, 0, 0, 0);
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
