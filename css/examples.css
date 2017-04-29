@@ -261,9 +261,14 @@ color: #326292;
 
 /*============================================*/
 /*sections-backgrounds*/
+/*#left1{
+      background: url(../images/blue-dark.jpg);
+      background-position: left top;
+    }*/
 
 #right1{
-      /*background: url(../images/blue-dark.jpg) center;*/
+      /*background: url(../images/blue-dark.jpg);*/
+      /*background-position: right top;*/
       background-image: url(../images/net.png);
       background-repeat: no-repeat;
       /*background-position: 50%;*/
@@ -578,13 +583,10 @@ blockquote {
   font-size: 165px;
   padding: 10px;
 }
-.ms-right {
-    width: 100% !important;
 }
-.ms-left {
-    width: 100% !important;
-}
-}
+
+.ms-responsive .ms-left{width: 100% !important;}
+.ms-responsive .ms-right{display: none;}
 /*=======================================================================*/
 
 .section1 .intro{

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="https://www.w3.org/1999/xhtml">
-
+<html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="EGC">
@@ -15,7 +14,9 @@
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="css/jquery.fullpage.min.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Dosis:200,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullpage.css"/>
+    <link rel="stylesheet" type="text/css" href="css/verticalslider.css" />
     <link rel="stylesheet" type="text/css" href="css/index3-style.css"/>
 
 </head>
@@ -23,11 +24,18 @@
 
 <div id="fullpage">
     <div class="section " id="home">
+      <div class="mouse-container">
+			<a href="#packages">
+				<div class="mouse">
+					<span class="scroll-down"></span>
+				</div>
+			</a>
+		</div>
         <!-- particles.js container -->
-        <div class="overlay"></div>
+        <!-- <div class="overlay"></div> -->
         <div id="particles-js"></div>
         <div class="content-after-particles">
-            <img src="images/logo-EGC-04.png" alt="fullPage"/>
+            <img src="images/logo-EGC-04.png" alt="fullPage" class="logo"/>
 
             <div class="hint">
                 <div class="wrap">
@@ -39,112 +47,173 @@
                     </div>
                 </div>
             </div>
+
+
         </div>
 
 
     </div>
     <div class="section" id="packages">
-        <div class="row sec-cards">
-            <div class="col s12 m6">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="https://materializecss.com/images/office.jpg">
-                    </div>
-                    <div class="card-content">
-                      <span class="card-title activator egc-color">INTERNET
-                        <i class="material-icons right">more_vert</i></span>
-                    </div>
+        <section id="ps-container" class="ps-container">
 
-                    <div class="card-reveal">
-                      <span class="card-title egc-color">INTERNET
-                        <i class="material-icons right">close</i>
+    			<div class="ps-header">
+    				<h1>PRICING</h1>
+    			</div><!-- /ps-header -->
+
+    			<div class="ps-contentwrapper">
+<!-- INTERNET -->
+      <div class="ps-content row">
+        <h2>INTERNET</h2>
+        <div class="col s12 m12 bordered">
+        <span class="title">
+          CABLE
+        </span>
+        <div class="divider"></div>
+          <div class="col s3 m3 ps-price">
+            <span class="">
+                $ 24.99/M
+            </span>
+          </div>
+          <div class="col s9 m9 desc">
+            <p>
+            EXPERIENCE THE SEAMLESS BROWSING AT HIGH
+            SPEED CABLE INTERNET, STARTING FROM
+            </p>
+          </div>
+        </div>
+
+        <div class="col s12 m12 bordered">
+          <!-- <div class="divider-full"></div> -->
+            <span class="title">
+              DSL/FTTN
+            </span>
+            <div class="divider"></div>
+            <div class="col s3 m3 ps-price">
+                <span class="">
+                    $ 29.99/M
+                </span>
+           </div>
+
+          <div class="col s9 m9 desc">
+            <p>
+              GET CONSISTENT BANDWIDTH WITH HIGH
+              SPEED DSL INTERNET, STARTING FROM
+             </p>
+           </div>
+        </div>
+      </div>
+
+<!-- PHONE -->
+            <div class="ps-content row">
+              <h2>PHONE</h2>
+              <div class="col s12 m12 bordered">
+              <span class="title">
+                VOIP / LANDLINE
+              </span>
+              <div class="divider"></div>
+                <div class="col s3 m3 ps-price">
+                  <span class="">
+                        $ 9.99/M
+                  </span>
+                </div>
+                <div class="col s9 m9 desc">
+                    <p>
+                    WE OFFERS A QUALITY INTERNET PHONE CALL SERVICE.
+                     THE CHEAPEST WAY TO MAKE CALLS STARTING FROM:
+                    </p>
+                </div>
+              </div>
+
+              <div class="col s12 m12 bordered">
+                <!-- <div class="divider-full"></div> -->
+                  <span class="title">
+                    EMAIL TO FAX
+                  </span>
+
+                  <div class="divider"></div>
+                  <div class="col s3 m3 ps-price">
+                      <span class="">
+                          $ 14.99/M
                       </span>
-
-                        <div class="card-tabs">
-                            <ul class="tabs tabs-fixed-width">
-                                <li class="tab"><a href="#test1" class="bold">CABLE</a></li>
-                                <li class="tab"><a class="active" href="#test2" class="bold">DSL/FTTN</a></li>
-                            </ul>
-                        </div>
-                        <div class="card-content white egc-color">
-                            <div id="test1">
-                                <p class="egc-gray">EXPERIENCE THE SEAMLESS BROWSING AT HIGH SPEED CABLE INTERNET,
-                                    STARTING FROM</p>
-
-                                <p class="egc-yellow bold">$24.99/Month</p>
-                            </div>
-                            <div id="test2">Test 2</div>
-                        </div>
-                    </div>
                 </div>
+
+                <div class="col s9 m9 desc">
+                    <p>
+                      OUR E-MAIL BASED FAX SERVICE ALLOWS YOU TO RECEIVE,
+                       SEND, OR BROADCAST FAXES SECURELY
+                     </p>
+                 </div>
+              </div>
             </div>
-
-            <div class="col s12 m6">
-                <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="https://materializecss.com/images/office.jpg">
-                    </div>
-                    <div class="card-content">
-                      <span class="card-title activator egc-color">PHONE
-                        <i class="material-icons right">more_vert</i></span>
-                        <!-- <p><a href="#">This is a link</a></p> -->
-                    </div>
-
-                    <div class="card-reveal">
-          <span class="card-title egc-color">PHONE
-            <i class="material-icons right">close</i>
-          </span>
-
-                        <div class="card-tabs">
-                            <ul class="tabs tabs-fixed-width">
-                                <li class="tab"><a href="#test4">Test 1</a></li>
-                                <li class="tab"><a class="active" href="#test5">Test 2</a></li>
-                                <li class="tab"><a href="#test6">Test 3</a></li>
-                            </ul>
-                        </div>
-                        <div class="card-content white grey-text text-darken-4">
-                            <div id="test4">Test 1</div>
-                            <div id="test5">Test 2</div>
-                            <div id="test6">Test 3</div>
-                        </div>
-                    </div>
+<!-- INTERNET & PHONE -->
+            <div class="ps-content row">
+              <h2>INTERNET & PHONE</h2>
+              <div class="col s12 m12 bordered">
+              <span class="title">
+                CABLE + VOIP / LANDLINE
+              </span>
+              <div class="divider"></div>
+                <div class="col s3 m3 ps-price">
+                    <span class="">
+                          $ 39.99/M
+                    </span>
                 </div>
-            </div>
-        </div>
-        <div class="row sec-cards">
-            <div class="col s12 m12">
-                <h2 class="header">Horizontal Card</h2>
-
-                <div class="card horizontal">
-                    <div class="card-image">
-                        <img src="https://lorempixel.com/100/190/nature/6">
-                    </div>
-                    <div class="card-stacked">
-                        <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information.</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">This is a link</a>
-                        </div>
-                    </div>
+                <div class="col s9 m9 desc">
+                    <p>
+                    EXPERIENCE THE HIGH SPEED CABLE INTERNET
+                    WITH VOIP LINES, STARTING FROM
+                    </p>
                 </div>
+              </div>
+
+              <div class="col s12 m12 bordered">
+                <!-- <div class="divider-full"></div> -->
+                  <span class="title">
+                    DSL + VOIP / LANDLINE
+                  </span>
+                  <div class="divider"></div>
+                  <div class="col s3 m3 ps-price">
+                  <span class="">
+                      $ 44.98/M
+                  </span>
+                </div>
+
+                <div class="col s9 m9">
+                <p>
+                  GET CONSISTENT BANDWIDTH
+                  WITH VOIP SERVICE, STARTING FROM
+                 </p>
+                 </div>
+              </div>
             </div>
-        </div>
+    			  </div><!-- /ps-contentwrapper -->
+
+    			<div class="ps-slidewrapper">
+    				<div class="ps-slides">
+    					<div class="bg-one">  <i class="material-icons icon-pricing">router</i></div>
+    					<div class="bg-two">  <i class="material-icons icon-pricing">ring_volume</i></div>
+    					<div class="bg-three">  <i class="material-icons icon-pricing">language</i></div>
+    					<!-- <div style="background-image:url(images/4.jpg);"></div>
+    					<div style="background-image:url(images/5.jpg);"></div> -->
+    				</div>
+    				<nav>
+    					<a href="#" class="ps-prev" ></a>
+    					<a href="#" class="ps-next" ></a>
+    				</nav>
+    			</div><!-- /ps-slidewrapper -->
+
+    		</section><!-- /ps-container -->
     </div>
     <div class="section" id="about">
         <div class="content-after-particles">
-            <i class="icon fa fa-3x fa-info"></i>
+            <i class="icon fa fa-4x fa-info-circle"></i>
             <h1>About us</h1>
-            <p >
-                Lorem ipsum dolor sit amet, meis cetero referrentur ius ut, ne virtute detracto mea. Eu nec facer nostro similique, est ad legere accumsan. In nulla dicam graecis vim, dicunt facilisi ut sea. Eu tation facete duo, choro dolorum eos no. Partiendo deseruisse nec ei, et legimus vulputate eam. Ad delenit lucilius delicatissimi vim.
-
-                Justo tollit constituam his ne, populo recusabo eloquentiam et mel. Sit ne purto indoctum, nulla viderer dissentias ne eam, eu tota simul mollis vim. Justo mollis inimicus vis ea. Legere sadipscing sea id, nemore minimum oporteat at qui. Ei vel debet ceteros molestiae, no est vero magna similique.
-
-                Est solet indoctum ad, ea quas ludus animal cum, ut cum sumo illum salutatus. In suas audiam docendi has, vix cu nominavi elaboraret. Id his suas congue, cu lorem discere est. Vim clita efficiendi ad, id facilisi postulant duo, per dico nonumy ubique ea.
-
-                Eu est iusto neglegentur. No veri simul delectus eam. Magna similique no vel, ipsum numquam et eam. In duo purto debitis, graece doming ad sea.
-
-                Ea nam cibo impetus vulputate. Nisl signiferumque quo in. Decore verear cum an. At duo illum mollis integre, pro ex vidisse inermis inimicus. Ex quo vidit assentior. In dicta nihil admodum vix, no aperiam imperdiet conceptam qui.
+            <div class="divider-about"></div>
+            <p>
+                Lorem ipsum dolor sit amet, meis cetero referrentur ius ut,
+                 ne virtute detracto mea. Eu nec facer nostro similique,
+                 est ad legere accumsan. In nulla dicam graecis vim,
+                 dicunt facilisi ut sea.
             </p>
         </div>
 
@@ -161,7 +230,17 @@
 <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
 <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
 <script src="js/typed.min.js"></script>
+<script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+<script type="text/javascript" src="js/slider.js"></script>
 <script src="js/index.js"></script>
+
+<script type="text/javascript">
+  $(function() {
+
+    Slider.init();
+
+  });
+</script>
 <script type="text/javascript">
     $(document).ready(function () {
         $('#fullpage').fullpage({

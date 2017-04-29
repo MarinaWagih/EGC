@@ -356,7 +356,7 @@
 </div>
 
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 <!-- <script src='http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script> -->
 <script type="text/javascript" src="js/jquery.easings.min.js"></script>
@@ -377,30 +377,29 @@
 						loopBottom: true,
 						loopTop: true,
             css3:true,
+            responsiveWidth: 900,
+            responsiveExpand: true,
+            // responsiveExpandKey: 'YWx2YXJvdHJpZ28uY29tX3IxaGNtVnpjRzl1YzJsMlpVVjRjR0Z1WkE9PWo4Mw==',
 
-                responsiveWidth: 1000,
-                responsiveExpand: true,
-                responsiveExpandKey: 'YWx2YXJvdHJpZ28uY29tX3IxaGNtVnpjRzl1YzJsMlpVVjRjR0Z1WkE9PWo4Mw==',
-
-                afterResponsive: function(){
-                    console.log("after responsive...");
-                },
-                onLeave: function(index, nextIndex, direction){
-                    console.log("onLeave: index:" + index + " nextIndex:" + nextIndex + " direction:"+direction);
-                    if(index ===1){
-                        $('.section1').addClass('hideOverflow');
-                        $('body').removeClass('section1-loaded');
-                    }
-                },
-                afterLoad: function(anchorLink, index){
-                    if(index === 1){
-                        $('.section1').removeClass('hideOverflow');
-                        $('body').addClass('section1-loaded');
-                    }
-                },
-                afterRender: function(){
+            afterResponsive: function(){
+                console.log("after responsive...");
+            },
+            onLeave: function(index, nextIndex, direction){
+                console.log("onLeave: index:" + index + " nextIndex:" + nextIndex + " direction:"+direction);
+                if(index ===1){
+                    $('.section1').addClass('hideOverflow');
+                    $('body').removeClass('section1-loaded');
+                }
+            },
+            afterLoad: function(anchorLink, index){
+                if(index === 1){
+                    $('.section1').removeClass('hideOverflow');
                     $('body').addClass('section1-loaded');
                 }
+            },
+            afterRender: function(){
+                $('body').addClass('section1-loaded');
+            }
 					});
 			});
 	</script>
