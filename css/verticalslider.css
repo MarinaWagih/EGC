@@ -42,7 +42,7 @@
 .ps-header {
 	top: 0px;
 	left: 0px;
-	height: 150px;
+	height: 105px;
 	z-index: 1001;
 	background: #fff;
 }
@@ -58,7 +58,7 @@
 }
 
 .ps-contentwrapper {
-	top: 150px;
+	top: 110px;
 	bottom: 0px;
 	overflow: hidden;
 	z-index: 1000;
@@ -77,7 +77,7 @@
 	border-right: 1px solid #f2f2f2;
 	border-bottom: 0px solid #f2f2f2;
   letter-spacing: 6px;
-  margin: 10px 0 30px;
+  margin: 10px 0 0px;
   text-align: center;
   font-weight: 700;
   font-size: 21px;
@@ -241,8 +241,8 @@
 	transition: top 400ms ease-out;
 }
 .col.s12.m12.bordered {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    /*padding-top: 30px;*/
+    /*padding-bottom: 30px;*/
 }
 
 .bg-one{
