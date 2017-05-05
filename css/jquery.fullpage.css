@@ -184,9 +184,9 @@ html.fp-enabled {
 #fp-nav ul li:hover a.active span,
 .fp-slidesNav ul li a.active span,
 .fp-slidesNav ul li:hover a.active span {
-    height: 12px;
-    width: 12px;
-    margin: -6px 0 0 -6px;
+    height: 15px;
+    width: 15px;
+    margin: -11px 0 0 -8px;
     border-radius: 100%
 }
 

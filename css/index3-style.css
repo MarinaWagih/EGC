@@ -114,12 +114,7 @@ h1{
     color: #fff;
     padding-left: 5px;
 }
-.padding-15 {
-  padding:20px !important;
-}
-.padding-5 {
-  padding:5px !important;
-}
+
 .border{
       border: 1px solid #efefef;
 }
@@ -136,6 +131,23 @@ h1{
     margin-bottom: 5px;
     margin-right: 5px;
     /*border: 1px solid #efefef;*/
+}
+.chip-tag-phone {
+  width: 40%;
+      height: inherit;
+      font-size: 13px;
+      font-weight: 500;
+      color: rgb(239, 239, 239);
+      line-height: 32px;
+      padding: 0 12px;
+      border-radius: 0px;
+      background-color: #345f7a;
+      /* border: 1px solid #9b647b; */
+      margin-bottom: 5px;
+      margin-right: 5px;
+      /* border: 1px solid #efefef; */
+      border: 2px solid;
+      border-radius: 3px;
 }
 .desc p {
   overflow-y: auto;
@@ -167,14 +179,7 @@ h1{
 #about p{
     font-size: 30px;
 }
-@media screen and (max-width: 768px){
-  .content-after-particles h1 {
-    font-size: 3em;
-}
-  #about p {
-      font-size: 22px;
-  }
-}
+
 
 /*==================cards style=============*/
 /*
@@ -190,16 +195,32 @@ h1{
   background-color: #985e6d;
 }*/
 .carousel-item {
-    padding: 5PX;
+    padding: 8px;
 }
 .block{
   display: block;
+}
+.font-25{
+    font-size: 22px;
 }
 .font-22{
     font-size: 22px;
 }
 .font-12{
     font-size: 12px;
+}
+.font-10{
+    font-size: 10px;
+}
+.line-height{
+      line-height: 10px;
+      vertical-align: super;
+}
+.padding-15 {
+  padding:20px !important;
+}
+.padding-5 {
+  padding:5px !important;
 }
 .margin-bottom {
     margin-bottom: 20px;
@@ -215,7 +236,8 @@ h1{
 .carousel .indicators .indicator-item {
     /*background-color: rgba(52, 95, 122, 0.45);*/
     background-color: #fff;
-    border: 3px solid rgb(236, 215, 182);
+    border: 2px solid rgb(236, 215, 182);
+    margin: 0px 4px;
 }
 .carousel .indicators .indicator-item.active {
     background-color: #345f7a;
@@ -272,31 +294,12 @@ h1{
     }
     .tabs .tab a {
         font-size: 16px !important;
+        color: rgb(212, 203, 187);
     }
     .tabs .tab a:hover, .tabs .tab a.active{
       color:#233237 !important;
     }
-    @media(max-width:500px){
-    /*.icon-pricing {
-      font-size: 40px;
-      padding: 10px;
-    }*/
-    .icon-pricing {
-      font-size: 165px;
-      padding: 10px;
-    }
-    /*.card-tabs {
-    -webkit-transform: translate(-123px, 115px) rotate(90deg) scale(0.8);
-    transform: translate(-123px, 115px) rotate(90deg) scale(0.8);
-    }
-    .tabs .tab a:hover, .tabs .tab a.active{
-      border: 2px solid #326292;
-      transition: color .28s ease;
-    transition: .2s ease-out;
-    transition-delay: 1s;
-    -webkit-transition-delay: 1s;
-    }*/
-    }
+
     /*
     background-color: #985E6D;
     background-color: #b99199;
@@ -307,147 +310,41 @@ h1{
     color: #326292;
     */
 
+/*====================================*/
+.ps-price span{
+  letter-spacing: 0px;
+  word-spacing: 0px;
+  /*text-align: left;*/
+}
+.speed{
+  padding-top: 25px !important;
+  padding-bottom: 5px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  text-align: left;
+}
+.float-left{
+  float: left;
+}
+.float-right{
+  float: right;
+}
+.border-top{
+  border-top: 2px solid #fff;
+}
+.number-big{
+  font-size: 45px;
+  /*float: left;*/
+  /*padding-left: 15px;*/
+}
 
-    /*@media screen and (max-width:768px){
-      .logo {
-            width: 60%;
-      }
-      .typed-cursor {
-          font-size: 45px;
-          color: #fff;
-      }
-      #typed{
-          font-size: 45px;
-          color: #fff;
-      }
-    }*/
-
-    @media screen and (max-width:600px){
-      .ps-slidewrapper > nav > a.ps-next:after {
-        top: 60%;
-    }
-    /*.ps-slidewrapper > nav > a.ps-prev:after {
-        top: 95%;
-    }*/
-    .divider {
-        height: 2px;
-        width: 65px;
-      }
-      .js .ps-header h1 {
-        line-height: 90px;
-        font-size: 30px;
-    }
-    /*.icon-pricing {
-        font-size: 100px !important;
-        padding: 10px !important;
-    }*/
-    .js .ps-slides {
-        bottom: 737px;
-        top: 56px;
-    }
-    .js .ps-header h1 {
-        line-height: 69px;
-        font-size: 20px;
-    }
-    .js .ps-contentwrapper {
-        top: auto;
-        height: 505px;
-        bottom: 61px;
-    }
-    }
-
-    @media screen and (max-width:400px){
-      .js .ps-content p {
-        line-height: 19px;
-        font-size: 12px;
-    }
-    #typed , .typed-cursor {
-        font-size: 22px;
-        color: #fff;
-    }
-    .js .ps-header {
-    height: 45px;
-    }
-    .js .ps-header h1 {
-    line-height: 45px;
-    font-size: 15px;
-    }
-    .js .ps-contentwrapper {
-    top: auto;
-    height: 475px;
-    bottom: 60px;
-    }
-    .js .ps-content p {
-    line-height: 20px;
-    border: none;
-    padding: 5px 10px;
-    height: 80px;
-    /*font-size: 24px;*/
-    }
-    .js .ps-content h2 {
-    border-right: none;
-    font-size: inherit;
-    margin: 5px 0;
-    padding-top: 0;
-    }
-    .js .ps-slides {
-        bottom: 490px;
-        top: -10px;
-    }
-    .divider {
-        height: 2px;
-        overflow: hidden;
-        background-color: #e0e0e0;
-        width: 50px;
-        margin-top: 0px;
-        margin-bottom: 3px;
-        left: 0;
-        position: relative;
-    }
-    .ps-content .title {
-    padding: 5px 0;
-    /* border-right: 2px solid #f2f2f2; */
-    /* border-bottom: 1px solid #345f7a; */
-    letter-spacing: 6px;
-    margin: -10px 0 6px;
-    text-align: left;
-    font-weight: 300;
-    display: block;
-    }
-    .col.s12.m12.bordered {
-        padding-top: 10px;
-        padding-bottom: 35px;
-    }
-    .ps-content .ps-price {
-    font-size: 12px;
-    padding-left: 5px;
-    padding-right: 5px;
-    }
-    }
-
-
-    @media (max-width:412px){
-      .js .ps-contentwrapper {
-        top: auto;
-        height: 475px;
-        bottom: 61px;
-    }
-      .js .ps-slides {
-        bottom: 528px;
-        top: 15px;
-    }
-    }
-    @media (max-width:412px){
-      .js .ps-contentwrapper {
-        top: auto;
-        height: 455px;
-        bottom: 61px;
-      }
-      #about p {
-        font-size: 16px;
-      }
-      .ps-content .title {
-        padding: 5px 0;
-        letter-spacing: 1px;
-      }
-    }
+.text-blue{
+  color: #323c4b;
+}
+.carousel {
+    height: 390px !important;
+}
+.desc p {
+    height: 130px;
+    overflow: hidden;
+}
