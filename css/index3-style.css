@@ -112,6 +112,29 @@ h1{
 .typed-cursor {
     font-size: 30px;
     color: #fff;
+    padding-left: 5px;
+}
+.padding-15 {
+  padding:20px !important;
+}
+
+.chip-tag {
+    display: inline-block;
+    height: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(0,0,0,0.6);
+    line-height: 32px;
+    padding: 0 12px;
+    border-radius: 0px;
+    background-color: #d4cbbb;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    /*border: 1px solid #efefef;*/
+}
+.desc p {
+  overflow-y: auto;
+  height: 140px;
 }
 #particles-js{
     height: 100%;
@@ -129,7 +152,9 @@ h1{
     text-align: center;
 }
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
-    background: #eac67a;
+    /*background: #eac67a;*/
+    background: #ecd7b6;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.09), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
 }
 #about h1{
     color:#fff ;
@@ -147,7 +172,7 @@ h1{
 }
 
 /*==================cards style=============*/
-
+/*
 ::-webkit-scrollbar-track{
   background-color: #d4cbbb;
   border-left: 1px solid #ececec;
@@ -158,6 +183,38 @@ h1{
 }
 ::-webkit-scrollbar-thumb{
   background-color: #985e6d;
+}*/
+.carousel-item {
+    padding: 5PX;
+}
+.block{
+  display: block;
+}
+.font-22{
+    font-size: 22px;
+}
+.font-12{
+    font-size: 12px;
+}
+.margin-bottom {
+    margin-bottom: 20px;
+}
+.tabs {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.carousel .indicators .indicator-item {
+    height: 20px;
+    width: 20px;
+}
+.carousel .indicators .indicator-item {
+    /*background-color: rgba(52, 95, 122, 0.45);*/
+    background-color: #fff;
+    border: 3px solid rgb(236, 215, 182);
+}
+.carousel .indicators .indicator-item.active {
+    background-color: #345f7a;
+    border:0px;
 }
 
     .egc-golden{
@@ -289,7 +346,7 @@ h1{
     }
     .js .ps-contentwrapper {
         top: auto;
-        height: 675px;
+        height: 505px;
         bottom: 61px;
     }
     }
@@ -370,22 +427,22 @@ h1{
         height: 475px;
         bottom: 61px;
     }
-    .js .ps-slides {
+      .js .ps-slides {
         bottom: 528px;
         top: 15px;
     }
     }
     @media (max-width:412px){
       .js .ps-contentwrapper {
-    top: auto;
-    height: 455px;
-    bottom: 61px;
-    }
-    #about p {
-    font-size: 16px;
-    }
-    .ps-content .title {
-    padding: 5px 0;
-    letter-spacing: 1px;
-    }
+        top: auto;
+        height: 455px;
+        bottom: 61px;
+      }
+      #about p {
+        font-size: 16px;
+      }
+      .ps-content .title {
+        padding: 5px 0;
+        letter-spacing: 1px;
+      }
     }
