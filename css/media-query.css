@@ -25,7 +25,7 @@
       z-index: 1000;
   }
   .js .ps-slidewrapper > nav {
-    width: 13%;
+    /*width: 13%;*/
     height: 10%;
 }
   /*.js .ps-content h2{
@@ -368,9 +368,27 @@
 }
 .js .ps-content h2 {
     border-right: none;
-    font-size: 25px;
-    margin: 5px 0;
+    font-size: 23px;
+    margin: 0px 0;
     padding-top: 0;
+}
+.ps-content h2 {
+    padding: 5px 15px;
+}
+.padding-15 {
+    padding: 10px !important;
+}
+.ps-slidewrapper > nav > a.ps-prev:after {
+    width: 30px;
+    height: 30px;
+    top: 157%;
+    left: 60%;
+}
+.ps-slidewrapper > nav > a.ps-next:after {
+    width: 30px;
+    height: 30px;
+    top: 65%;
+    left: 60%;
 }
 .js .ps-contentwrapper {
     top: auto;
@@ -447,6 +465,9 @@
 .chip-tag {
     font-size: 11px;
     display: block;
+}
+.js .ps-slidewrapper > nav {
+    height: 45px;
 }
 }
 
