@@ -86,13 +86,13 @@
     width: 30px;
     height: 30px;
     top: 129%;
-    left: 111%;
+    /*left: 111%;*/
   }
   .ps-slidewrapper > nav > a.ps-next:after {
     width: 30px;
     height: 30px;
     top: 60%;
-    left: 111%;
+    /*left: 111%;*/
   }
   .carousel .indicators .indicator-item {
     margin: 10px 4px;
@@ -381,7 +381,7 @@
 .ps-slidewrapper > nav > a.ps-prev:after {
     width: 30px;
     height: 30px;
-    top: 157%;
+    top: 140%;
     left: 60%;
 }
 .ps-slidewrapper > nav > a.ps-next:after {
