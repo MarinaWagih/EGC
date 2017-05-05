@@ -387,7 +387,10 @@
   /*.ps-slidewrapper > nav > a.ps-prev:after {
       top: 95%;
   }*/
-  
+  #typed {
+    font-size: 25px;
+    color: #fff;
+}
   .divider {
       height: 2px;
       width: 65px;
@@ -424,6 +427,27 @@
     font-size: 165px;
     padding: 10px;
   }
+
+  .border-top {
+      border-top: 2px solid #fff;
+      border-left: 2px solid #fff;
+      border-top: 0px;
+  }
+  .speed {
+    padding-top: 0px !important;
+    padding-bottom: 5px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    text-align: left;
+}
+.desc p {
+    height: 50px;
+    overflow: hidden;
+}
+.chip-tag {
+    font-size: 11px;
+    display: block;
+}
 }
 
 @media screen and (max-width:412px){
@@ -517,4 +541,6 @@
     padding-left: 5px;
     padding-right: 5px;
   }
+
+
 }

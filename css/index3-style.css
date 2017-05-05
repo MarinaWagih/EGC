@@ -133,7 +133,7 @@ h1{
     /*border: 1px solid #efefef;*/
 }
 .chip-tag-phone {
-  width: 40%;
+    /*width: 40%;*/
       height: inherit;
       font-size: 13px;
       font-weight: 500;
