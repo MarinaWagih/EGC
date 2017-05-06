@@ -434,9 +434,7 @@
       height: 500px;
       bottom: 34px;
   }
-}
-
-@media screen and (max-width: 500px){
+  
   /*.icon-pricing {
     font-size: 40px;
     padding: 10px;
