@@ -1029,7 +1029,18 @@
 <script type="text/javascript" src="js/slider.js"></script>
 <script src="js/index.js"></script>
 <script>
-$('.carousel.carousel-slider').carousel({fullWidth: true});
+$('.carousel.carousel-slider').carousel({
+  fullWidth: true,
+  //default settings:
+  // autoplay:true,
+  // loop:true,
+  // autoplayTimeout:500,
+  // autoplayHoverPause:true
+});
+$(document).ready(function(){
+        $('.carousel').carousel({dist:0});
+        window.setInterval(function(){$('.carousel').carousel('next')},3000)
+     });
 </script>
 
 
