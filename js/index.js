@@ -162,3 +162,6 @@ $(function() {
         "retina_detect": true
     });
   });
+// $('#mouse-click').click(function () {
+//       $('#').trigger('click')
+// });

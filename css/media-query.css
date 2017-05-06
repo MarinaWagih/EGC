@@ -400,11 +400,11 @@
 
 @media screen and (max-width:600px){
   .ps-slidewrapper > nav > a.ps-next:after {
-    top: 60%;
+    top: 65%;
   }
-  /*.ps-slidewrapper > nav > a.ps-prev:after {
-      top: 95%;
-  }*/
+  .ps-slidewrapper > nav > a.ps-prev:after {
+      top: 159%;
+  }
   #typed {
     font-size: 25px;
     color: #fff;
@@ -434,7 +434,7 @@
       height: 500px;
       bottom: 34px;
   }
-  
+
   /*.icon-pricing {
     font-size: 40px;
     padding: 10px;
@@ -468,7 +468,15 @@
     height: 45px;
 }
 }
-
+@media screen and (max-width:500px){
+.desc p {
+    height: 35px;
+    overflow: hidden;
+}
+.small-desc-price{
+  display: none;
+}
+}
 @media screen and (max-width:412px){
   .js .ps-contentwrapper {
     top: auto;
