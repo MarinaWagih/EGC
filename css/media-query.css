@@ -502,6 +502,12 @@
 .contact-data .row .col.s12.m3{
       margin-bottom: 15px;
 }
+#contact a {
+    /*color: #a8a8a8;*/
+    color: #B99199;
+    /*color: #A87781;*/
+    font-weight: bold;
+}
 }
 @media screen and (max-width:500px){
 .desc p {
@@ -608,11 +614,21 @@
 }
 
 @media screen and (max-width:360px){
+  span.new.badge.egc {
+    margin-bottom: 15px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 15px;
+    float: left;
+    width: 100%;
+    text-align: center;
+}
 .js .ps-content p {
     line-height: 20px;
     border: none;
     padding: 5px 10px;
     height: 25px;
+    margin-bottom: 0px;
     /* font-size: 24px; */
 }
 .font-12 {
