@@ -59,6 +59,11 @@
   .js .ps-header {
       height: 50px;
   }
+  .desc-page .btn-back{
+      float: left;
+      padding: 8px 4px;
+      height: 50px;
+  }
 	.js .ps-header h1 {
     line-height: 50px;
     font-size: 20px;
@@ -125,7 +130,7 @@
     /*overflow-y: scroll;*/
     /* border-right: 2px solid #f2f2f2; */
     /* border-bottom: 1px solid #345f7a; */
-    font-size: 28px;
+    font-size: 15px;
 	}
   .ps-content .ps-price {
       float: left;
@@ -206,6 +211,11 @@
       padding-top: 0;
   }
   .js .ps-header {
+      height: 80px;
+  }
+  .desc-page .btn-back{
+      float: left;
+      padding: 10px 4px;
       height: 80px;
   }
   /*.js .ps-header h1 {
@@ -297,6 +307,11 @@
   .js .ps-header {
       height: 75px;
   }
+  .desc-page .btn-back{
+      float: left;
+      padding: 10px 4px;
+      height: 75px;
+  }
   .js .ps-slides {
     bottom: 870px;
     top: 40px;
@@ -358,6 +373,11 @@
 .js .ps-header {
     height: 45px;
 }
+.desc-page .btn-back{
+    float: left;
+    padding: 5px 4px;
+    height: 45px;
+}
 .js .ps-slides {
   bottom: 527px;
   top: 0px;
@@ -395,7 +415,11 @@
     height: 492px;
     bottom: 61px;
 }
-
+.data-section {
+  top: auto;
+  height: 466px;
+  bottom: 61px;
+}
 }
 
 @media screen and (max-width:600px){
@@ -555,6 +579,11 @@
   }
   .js .ps-header {
     height: 45px;
+  }
+  .desc-page .btn-back{
+      float: left;
+      padding: 6px 4px;
+      height: 45px;
   }
   .js .ps-header h1 {
     line-height: 45px;
