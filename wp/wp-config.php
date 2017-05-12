@@ -20,7 +20,7 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'egc');
+define('DB_NAME', 'wp-egc');
 
 /** MySQL database username */
 define('DB_USER', 'root');
@@ -46,14 +46,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'r+^qgbH/rb4XPXSS`?-NtsJ~Q~b&VL(XEC^I0i$pI)352oRstF ;u[K_sq1npiD;');
-define('SECURE_AUTH_KEY',  'bcxTr8Kd5VToj~O_tepfI<2fl2(ISz+Wpn>iDe4N rUAwYLX|pExrx&(_@9dWyyk');
-define('LOGGED_IN_KEY',    'y#J(6  /?<,/r<a&R-a85rkma~fo]|XIZWhF7a xo_}sd%rYYhU|U[bLY`EtIw@J');
-define('NONCE_KEY',        '!?Au:#[<xXb>A=ZgJ8?/SyqSyY`8],CY+L,^3It).JXE[m+)[:yA *H8LSS2r)@v');
-define('AUTH_SALT',        '&,dPrFGq:IH@.hBfs:7.?*g-[L1pJ^hz<XB6wb^*np,<2X#!cWdH_&,Lk~?^:C2`');
-define('SECURE_AUTH_SALT', ':N!5>^@O_Zr69r2JtzKCx$_/L/+@s ,0#>u24$`,SXKZTY2p+<+G,:<G4dH,N{5S');
-define('LOGGED_IN_SALT',   ':PV4U/Xr!bW.b}nQ|#PI);v6>~hDR`]Nc~7B7Le2IIh>D4I{.<I~p%Gtzeq>fT48');
-define('NONCE_SALT',       '6UJ)Pr^_U]f<QT1J5bKXI#./TXc<g.o-U:3#s~lPNvQIgSm*D(@ot6BqnU6%lgP9');
+define('AUTH_KEY',         '4WGx,/Su9je,+cK~My5,#n#djPVj9~ J_x5JEvq(y5hj_eT2mb5/Dl+Bp*QJ1&Qm');
+define('SECURE_AUTH_KEY',  '&TtQToI@e]@P`z/0LZoqV507SF_!o`-C{(#3QtLeE5sV8.#.ds~?l[XQn5k|kRCR');
+define('LOGGED_IN_KEY',    'U[|9)AkvKvlwwM%KXmdAuV;`=bdz,GV&HZJqQn6eyWgcC$s1gf@Wy,7f}.>{][kl');
+define('NONCE_KEY',        'NX@0ZjVo@zB[_B4S8[ELldkl9|eMxBSGtLXbxr,-<[S3=fI.FPV?HufK21KK@w?j');
+define('AUTH_SALT',        '4buI:tM(sIbe2XTn|9bp$+8OtlgNSu&+}Q(pk` :X;{TDrX0v:IZ4ccHw)dY]@<u');
+define('SECURE_AUTH_SALT', '%_+4*Cyy)^T8pmshqH=B=%Hu=9jA_AtlJ*<F}yI5S)>[9B6^Sj4uM,U=V%+C-z:Z');
+define('LOGGED_IN_SALT',   'o@E!Yk 4_KPE>yA?FYzckHDR08%A<?y|nKI;?ESMIy%4}Ee`GKv)a!t^j8`Es#zp');
+define('NONCE_SALT',       'WLJSY1HD?bgjVI/I(Q&HAI;m$0z.MAFRAPQMLeHOK<~,XRn3Y:ebE {@Xo; hqIE');
 
 /**#@-*/
 
@@ -87,3 +87,6 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+
+
+define('FS_METHOD','direct');

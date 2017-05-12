@@ -103,7 +103,9 @@ add_action('init','egc_custom_post_type');
  * Custome taxonomi
  *===================================
  */
-//function egc_custom_taxonomy()
+/**
+ *
+ //function egc_custom_taxonomy()
 //{
 //    // ***********   internet *****************
 //    //*****************************************
@@ -153,3 +155,55 @@ add_action('init','egc_custom_post_type');
 //
 //}
 //add_action( 'init' , 'myTheme_custom_taxonomy' );
+**/
+
+/**
+ * Add package custom fields
+ */
+function add_cafe_meta_boxes() {
+    add_meta_box("package_extra_data",
+        "package Details",
+        "add_package_details_meta_box",
+        "packages", "normal", "low");
+}
+function add_package_details_meta_box()
+{
+    global $post;
+    $custom = get_post_custom( $post->ID );
+
+    ?>
+        <style>.width99 {width:99%;}</style>
+        <p>
+            <label>Price before sale:</label><br />
+
+            <input type="number" name="price_before" value="<?= @$custom["price_before"][0] ?>" class="width99" />
+        </p>
+
+        <p>
+            <label>Price after sale:</label><br />
+
+            <input type="number" name="price_after" value="<?= @$custom["price_after"][0] ?>" class="width99" />
+        </p>
+        <p>
+            <label>speed :</label><br />
+
+            <input type="number" name="speed" value="<?= @$custom["speed"][0] ?>" class="width99" />
+        </p>
+    <?php
+}
+/**
+ * Save custom field data when creating/updating posts
+ */
+function save_package_custom_fields(){
+    global $post;
+
+    if ( $post )
+    {
+        update_post_meta($post->ID, "price_before", @$_POST["price_before"]);
+        update_post_meta($post->ID, "price_after", @$_POST["price_after"]);
+        update_post_meta($post->ID, "speed", @$_POST["speed"]);
+    }
+//    var_dump(get_post_meta($post->ID),@$_POST);die();
+}
+add_action( 'admin_init', 'add_cafe_meta_boxes' );
+add_action( 'save_post', 'save_package_custom_fields' );
