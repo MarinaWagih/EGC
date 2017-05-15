@@ -229,7 +229,10 @@ h1{
   padding:20px !important;
 }
 .padding-5 {
-  padding:5px !important;
+  padding:7px !important;
+}
+.padding-5-inner {
+  padding:5px 0px !important;
 }
 .margin-bottom {
     margin-bottom: 20px;
