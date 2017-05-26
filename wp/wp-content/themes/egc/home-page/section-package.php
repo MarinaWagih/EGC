@@ -5,6 +5,19 @@
  * Date: 5/6/17
  * Time: 8:11 PM
  */
+$categories=['cable','dsl','internet-and-phone','phone'];
+$result=[];
+foreach($categories as $category)
+{
+    $args = array(
+        'post_type' => 'packages',
+        'taxonomy_name' => $category
+    );
+
+    $result[$category] = query_posts($args);
+}
+wp_reset_query();
+
 ?>
 <div class="section" id="packages">
     <section id="ps-container" class="ps-container">
@@ -25,9 +38,6 @@
                         </ul>
                     </div>
                     <div id="test1" class="carousel carousel-slider center" data-indicators="true">
-                        <!-- <div class="carousel-fixed-item center">
-                          <a class="btn waves-effect white grey-text darken-text-2">button</a>
-                        </div> -->
                         <div class="carousel-item" href="#one!">
                             <div class="col s12 m12 bordered padding-15">
                           <span class="title bold">
@@ -315,31 +325,20 @@
                             </div>
                         </div>
                     </div>
-                    <div id="test2" class="carousel carousel-slider center" data-indicators="true">
-                        <!-- <div class="carousel-fixed-item center">
-                          <a class="btn waves-effect white grey-text darken-text-2">button</a>
-                        </div> -->
+                    <div id="test4" class="carousel carousel-slider center" data-indicators="false">
                         <div class="carousel-item" href="#one!">
                             <div class="col s12 m12 bordered padding-15">
                           <span class="title bold">
-                            High Speed DSL 25/10 Mbps
+                            Internet Basic 5
                           </span>
                                 <div class="divider"></div>
                                 <div class="col s12 m4 ps-price">
                               <span class="col s6 font-12">
-                                  <del class="text-blue" class="text-blue" class="text-blue">
-                                      <strong class="block font-25">$49.99/M</strong>
-                                  </del>
-                                  Limited Time Offer!
-                                  <strong class="block font-25">$43.99/M</strong>
+                                  <strong class="block font-25">$24.99/M</strong>
                                   Starting from
                               </span>
-                                    <!-- <span class="font-12">
-                                        <strong class="block font-25">$43.99/M</strong>
-                                        Starting from
-                                    </span> -->
                                     <div class="col s6 m12 ps-price speed border-top">
-                                <span class="number-big">25
+                                <span class="number-big">5
                                   <strong class=" font-25 line-height">
                                       Mbps
                                   </strong>
@@ -352,12 +351,13 @@
 
                                 <div class="col s12 m8 desc">
                                     <p class="margin-bottom">
-                                        Do you have several computers in your
-                                        home? Do you like downloading videos,
-                                        music and
+                                        Yearly payment required Do you
+                                        like sending emails to your friends
+                                        and surfing the Internet on ...
                                     </p>
                                     <div class="chip-tag">
-                                        Data Transfer Unlimited
+                                        Data Transfer Download 75Gb
+                                        <!-- <i class="close material-icons">close</i> -->
                                     </div>
                                 </div>
                             </div>
@@ -366,16 +366,16 @@
                         <div class="carousel-item" href="#two!">
                             <div class="col s12 m12 bordered padding-15">
                            <span class="title bold">
-                             Basic DSL 6 Mbps
+                             Internet 10
                            </span>
                                 <div class="divider"></div>
                                 <div class="col s12 m4 ps-price">
                               <span class="col s6 font-12">
-                                  <strong class="block font-25">$29.99/M</strong>
+                                  <strong class="block font-25">$34.99/M</strong>
                                   Starting from
                               </span>
                                     <div class="col s6 m12 ps-price speed border-top">
-                                <span class="number-big">6
+                                <span class="number-big">10
                                   <strong class=" font-25 line-height">
                                       Mbps
                                   </strong>
@@ -392,7 +392,8 @@
                                         exchanging pictures by email and...
                                     </p>
                                     <div class="chip-tag">
-                                        Data Transfer Unlimited
+                                        Data Transfer Download 200Gb
+                                        <!-- <i class="close material-icons">close</i> -->
                                     </div>
                                 </div>
                             </div>
@@ -405,11 +406,11 @@
                                 <div class="divider"></div>
                                 <div class="col s12 m4 ps-price">
                               <span class="col s6 font-12">
-                                  <strong class="block font-25">$32.99/M</strong>
+                                  <strong class="block font-25">$39.99/M</strong>
                                   Starting from
                               </span>
                                     <div class="col s6 m12 ps-price speed border-top">
-                                <span class="number-big">7
+                                <span class="number-big">15
                                   <strong class=" font-25 line-height">
                                       Mbps
                                   </strong>
@@ -421,11 +422,12 @@
                                 </div>
                                 <div class="col s12 m8 desc">
                                     <p class="margin-bottom">
-                                        Do you like sending emails to your friends and
-                                        surfing the Internet on daily basis? Do you
+                                        Quickly download medium sized files,
+                                        music, pictures, and funny clips!
+                                        Search the Internet
                                     </p>
                                     <div class="chip-tag">
-                                        Data Transfer Unlimited
+                                        Data Transfer Download 200Gb
                                         <!-- <i class="close material-icons">close</i> -->
                                     </div>
                                 </div>
@@ -434,16 +436,16 @@
                         <div class="carousel-item" href="#four!">
                             <div class="col s12 m12 bordered padding-15">
                           <span class="title bold">
-                            High Speed DSL 10/1 Mbps
+                            High Speed 20
                           </span>
                                 <div class="divider"></div>
                                 <div class="col s12 m4 ps-price">
                               <span class="col s6 font-12">
-                                  <strong class="block font-25">$37.99/M</strong>
+                                  <strong class="block font-25">$44.99/M</strong>
                                   Starting from
                               </span>
                                     <div class="col s6 m12 ps-price speed border-top">
-                                <span class="number-big">10
+                                <span class="number-big">20
                                   <strong class=" font-25 line-height">
                                       Mbps
                                   </strong>
@@ -455,11 +457,11 @@
                                 </div>
                                 <div class="col s12 m8 desc">
                                     <p class="margin-bottom">
-                                        Do you have several computers in your home?
-                                        Do you like downloading videos, music and
+                                        Free up your telephone line and surf faster.
+                                        Stay permanently connected. Do you like
                                     </p>
                                     <div class="chip-tag">
-                                        Data Transfer Unlimited
+                                        Data Transfer Download 200Gb
                                         <!-- <i class="close material-icons">close</i> -->
                                     </div>
                                 </div>
@@ -468,16 +470,18 @@
                         <div class="carousel-item" href="#five!">
                             <div class="col s12 m12 bordered padding-15">
                           <span class="title bold">
-                            High Speed DSL 10/7 Mbps
+                            High Speed 30
                           </span>
                                 <div class="divider"></div>
                                 <div class="col s12 m4 ps-price">
                               <span class="col s6 font-12">
-                                  <strong class="block font-25">$39.99/M</strong>
+                                <del class="text-blue" class="text-blue" class="text-blue"><strong class="block font-25">$64.99/M</strong></del>
+                                Limited Time Offer!
+                                  <strong class="block font-25">$49.99/M</strong>
                                   Starting from
                               </span>
                                     <div class="col s6 m12 ps-price speed border-top">
-                                <span class="number-big">10
+                                <span class="number-big">30
                                   <strong class=" font-25 line-height">
                                       Mbps
                                   </strong>
@@ -489,8 +493,8 @@
                                 </div>
                                 <div class="col s12 m8 desc">
                                     <p class="margin-bottom">
-                                        Do you have several computers in your home?
-                                        Do you like downloading videos, music and
+                                        If you love listening songs, watching videos,
+                                        connecting with your friends on social media
                                     </p>
                                     <div class="chip-tag">
                                         Data Transfer Unlimited
@@ -507,11 +511,13 @@
                                 <div class="divider"></div>
                                 <div class="col s12 m4 ps-price">
                               <span class="col s6 font-12">
-                                  <strong class="block font-25">$39.99/M</strong>
+                                <del class="text-blue" class="text-blue" class="text-blue" class="text-blue"><strong class="block font-25">$79.99/M</strong></del>
+                                Limited Time Offer!
+                                  <strong class="block font-25">$59.99/M</strong>
                                   Starting from
                               </span>
                                     <div class="col s6 m12 ps-price speed border-top">
-                                <span class="number-big">15
+                                <span class="number-big">60
                                   <strong class=" font-25 line-height">
                                       Mbps
                                   </strong>
@@ -523,8 +529,9 @@
                                 </div>
                                 <div class="col s12 m8 desc">
                                     <p class="margin-bottom">
-                                        Do you like sending emails to your friends and
-                                        surfing the Internet on daily basis? Do you
+                                        Passionate about HD movies,
+                                        games and music and want to
+                                        download your heart’s
                                     </p>
                                     <div class="chip-tag">
                                         Data Transfer Unlimited
@@ -536,16 +543,18 @@
                         <div class="carousel-item" href="#seven!">
                             <div class="col s12 m12 bordered padding-15">
                           <span class="title bold">
-                            High Speed DSL 15/10 Mbps
+                          Ultimate High Speed 120
                           </span>
                                 <div class="divider"></div>
                                 <div class="col s12 m4 ps-price">
                               <span class="col s6 font-12">
-                                  <strong class="block font-25">$43.99/M</strong>
+                                <del class="text-blue" class="text-blue" class="text-blue"><strong class="block font-25">$99.99/M</strong></del>
+                                Limited Time Offer!
+                                  <strong class="block font-25">$69.99/M</strong>
                                 <span class="bold">Starting from</span>
                               </span>
                                     <div class="col s6 m12 ps-price speed border-top">
-                                <span class="number-big">15
+                                <span class="number-big">120
                                   <strong class=" font-25 line-height">
                                       Mbps
                                   </strong>
@@ -557,8 +566,8 @@
                                 </div>
                                 <div class="col s12 m8 desc">
                                     <p class="margin-bottom">
-                                        Do you have several computers in your home?
-                                        Do you like downloading videos, music and
+                                        Experience the internet at full and fastest
+                                        speed! Download whatever you want in record
                                     </p>
                                     <div class="chip-tag">
                                         Data Transfer Unlimited
@@ -570,16 +579,18 @@
                         <div class="carousel-item" href="#eight!">
                             <div class="col s12 m12 bordered padding-15">
                           <span class="title bold">
-                            High Speed DSL 50/10 Mbps
+                          Platinum High Speed 200
                           </span>
                                 <div class="divider"></div>
                                 <div class="col s12 m4 ps-price">
                               <span class="col s6 font-12">
-                                  <strong class="block font-25">$59.99/M</strong>
+                                <del class="text-blue" class="text-blue" class="text-blue" class="text-blue"><strong class="block font-25">$119.99/M</strong></del>
+                                Limited Time Offer!
+                                  <strong class="block font-25">$99.99/M</strong>
                                 <span class="bold">Starting from</span>
                               </span>
                                     <div class="col s6 m12 ps-price speed border-top">
-                                <span class="number-big">50
+                                <span class="number-big">200
                                   <strong class=" font-25 line-height">
                                       Mbps
                                   </strong>
@@ -591,8 +602,8 @@
                                 </div>
                                 <div class="col s12 m8 desc">
                                     <p class="margin-bottom">
-                                        Do you have several computers in your home?
-                                        Do you like downloading videos, music and
+                                        Enjoy our fastest Internet access
+                                        with no speed limit! You can download movies and
                                     </p>
                                     <div class="chip-tag">
                                         Data Transfer Unlimited
@@ -603,42 +614,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="col s12 m12 bordered">
-                    <span class="title">
-                      CABLE
-                    </span>
-                    <div class="divider"></div>
-                      <div class="col s3 m3 ps-price">
-                        <span class="">
-                            $ 24.99/M
-                        </span>
-                      </div>
-                      <div class="col s9 m9 desc">
-                        <p>
-                        EXPERIENCE THE SEAMLESS BROWSING AT HIGH
-                        SPEED CABLE INTERNET, STARTING FROM
-                        </p>
-                      </div>
-                </div> -->
-
-                <!-- <div class="col s12 m12 bordered">
-                    <span class="title">
-                      DSL/FTTN
-                    </span>
-                    <div class="divider"></div>
-                    <div class="col s3 m3 ps-price">
-                        <span class="">
-                            $ 29.99/M
-                        </span>
-                   </div>
-
-                  <div class="col s9 m9 desc">
-                    <p>
-                      GET CONSISTENT BANDWIDTH WITH HIGH
-                      SPEED DSL INTERNET, STARTING FROM
-                     </p>
-                   </div>
-                </div> -->
             </div>
 
             <!-- PHONE -->
@@ -651,9 +626,6 @@
                         </ul>
                     </div>
                     <div id="test3" class="carousel carousel-slider center" data-indicators="true">
-                        <!-- <div class="carousel-fixed-item center">
-                          <a class="btn waves-effect white grey-text darken-text-2">button</a>
-                        </div> -->
                         <div class="carousel-item" href="#one!">
                             <div class="col s12 m12 bordered padding-15">
                             <span class="title bold">
@@ -915,8 +887,6 @@
                 <div class="bg-one">  <i class="material-icons icon-pricing">router</i></div>
                 <div class="bg-two">  <i class="material-icons icon-pricing">ring_volume</i></div>
                 <div class="bg-three">  <i class="material-icons icon-pricing">language</i></div>
-                <!-- <div style="background-image:url(images/4.jpg);"></div>
-                <div style="background-image:url(images/5.jpg);"></div> -->
             </div>
             <nav>
                 <a href="#" class="ps-prev" ></a>

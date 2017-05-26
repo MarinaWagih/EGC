@@ -160,13 +160,13 @@ add_action('init','egc_custom_post_type');
 /**
  * Add package custom fields
  */
-function add_cafe_meta_boxes() {
+function egc_add_package_meta_boxes() {
     add_meta_box("package_extra_data",
         "package Details",
-        "add_package_details_meta_box",
+        "egc_add_package_details_meta_box",
         "packages", "normal", "low");
 }
-function add_package_details_meta_box()
+function egc_add_package_details_meta_box()
 {
     global $post;
     $custom = get_post_custom( $post->ID );
@@ -194,7 +194,7 @@ function add_package_details_meta_box()
 /**
  * Save custom field data when creating/updating posts
  */
-function save_package_custom_fields(){
+function egc_save_package_custom_fields(){
     global $post;
 
     if ( $post )
@@ -205,5 +205,6 @@ function save_package_custom_fields(){
     }
 //    var_dump(get_post_meta($post->ID),@$_POST);die();
 }
-add_action( 'admin_init', 'add_cafe_meta_boxes' );
-add_action( 'save_post', 'save_package_custom_fields' );
+add_action( 'admin_init', 'egc_add_package_meta_boxes' );
+add_action( 'save_post', 'egc_save_package_custom_fields' );
+load_theme_textdomain( 'egc', TEMPLATEPATH.'/lang' );
