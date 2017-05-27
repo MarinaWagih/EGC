@@ -9,13 +9,10 @@
 <div class="section" id="about">
     <div class="content-after-particles">
         <i class="icon fa fa-4x fa-info-circle"></i>
-        <h1>About us</h1>
+        <h1><?php echo get_option('egc_slogan');?></h1>
         <div class="divider-about"></div>
         <p>
-            Lorem ipsum dolor sit amet, meis cetero referrentur ius ut,
-            ne virtute detracto mea. Eu nec facer nostro similique,
-            est ad legere accumsan. In nulla dicam graecis vim,
-            dicunt facilisi ut sea.
+            <?php echo get_option('about_content');?>
         </p>
     </div>
 </div>

@@ -24,7 +24,7 @@
             <div class="wrap">
                 <div class="type-wrap">
                     <div id="typed-strings">
-                        <p>Internet & Phone Contributor</p>
+                        <p><?php echo get_option('about_title');?></p>
                     </div>
                     <span id="typed" style=""></span>
                 </div>

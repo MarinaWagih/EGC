@@ -208,3 +208,152 @@ function egc_save_package_custom_fields(){
 add_action( 'admin_init', 'egc_add_package_meta_boxes' );
 add_action( 'save_post', 'egc_save_package_custom_fields' );
 load_theme_textdomain( 'egc', TEMPLATEPATH.'/lang' );
+
+/**
+ * Option page
+ */
+
+function egc_theme_settings_page(){
+    ?>
+    <div class="wrap">
+        <h1>EGC Data</h1>
+        <form method="post" action="options.php">
+            <?php
+            settings_fields("section");
+            do_settings_sections("theme-data");
+            submit_button();
+            ?>
+        </form>
+    </div>
+<?php
+}
+
+function add_theme_menu_item()
+{
+    add_menu_page("EGC data",
+                  "EGC data",
+                  "manage_options",
+                  "theme-data",
+                  "egc_theme_settings_page",
+                  null, 99);
+}
+
+add_action("admin_menu", "add_theme_menu_item");
+
+function egc_display_slogan_element()
+{
+?>
+        <input type="text"
+               name="egc_slogan"
+               id="egc_slogan"
+               style="    width: 100%;height: 35px;"
+               value="<?php echo get_option('egc_slogan'); ?>" />
+<?php
+}
+function egc_display_about_title_element()
+{
+?>
+        <input type="text"
+               name="about_title"
+               id="about_title"
+               style="    width: 100%;height: 35px;"
+               value="<?php echo get_option('about_title'); ?>" />
+
+<?php
+}
+function egc_display_about_content_element()
+{
+    ?>
+    <textarea
+           name="about_content"
+           id="about_content"
+           style="width: 100%;"
+           rows="10"
+        ><?php echo get_option('about_content'); ?></textarea>
+
+<?php
+}
+function egc_display_phones_element()
+{
+    ?>
+    <input type="text"
+           name="phones"
+           id="phones"
+           style="    width: 100%;height: 35px;"
+           value="<?php echo get_option('phones'); ?>" />
+
+<?php
+}
+
+function egc_display_address_element()
+{
+    ?>
+    <input type="text"
+           name="address"
+           id="address"
+           style="    width: 100%;height: 35px;"
+           value="<?php echo get_option('address'); ?>" />
+
+<?php
+}
+
+function egc_display_email_element()
+{
+    ?>
+    <input type="email"
+           name="email"
+           id="email"
+           style="    width: 100%;height: 35px;"
+           value="<?php echo get_option('email'); ?>" />
+
+<?php
+}
+
+function egc_display_fax_element()
+{
+    ?>
+    <input type="text"
+           name="fax"
+           id="fax"
+           style="    width: 100%;height: 35px;"
+           value="<?php echo get_option('fax'); ?>" />
+
+<?php
+}
+
+function egc_display_theme_panel_fields()
+{
+    add_settings_section("section", "", null, "theme-data");
+
+    add_settings_field("egc_slogan", "egc slogan in home page",
+        "egc_display_slogan_element", "theme-data", "section");
+    register_setting("section", "egc_slogan");
+
+    add_settings_field("about_title", "About us section title",
+        "egc_display_about_title_element", "theme-data", "section");
+    register_setting("section", "about_title");
+
+    add_settings_field("about_content", "About us section content",
+        "egc_display_about_content_element", "theme-data", "section");
+    register_setting("section", "about_content");
+
+    add_settings_field("phones", 'phones separated by " , " ',
+        "egc_display_phones_element", "theme-data", "section");
+    register_setting("section", "phones");
+
+    add_settings_field("address", 'address',
+        "egc_display_address_element", "theme-data", "section");
+    register_setting("section", "address");
+
+    add_settings_field("email", 'email',
+        "egc_display_email_element", "theme-data", "section");
+    register_setting("section", "email");
+
+    add_settings_field("fax", 'fax separated by " , " ',
+        "egc_display_fax_element", "theme-data", "section");
+    register_setting("section", "fax");
+
+}
+
+add_action("admin_init", "egc_display_theme_panel_fields");
+
