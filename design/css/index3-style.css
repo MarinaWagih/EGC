@@ -490,16 +490,7 @@ span.new.badge.egc {
 .desc-page .btn-back i{
       font-size: 25px;
 }
-.language{
-  position: fixed;
-  z-index: 100;
-  margin-top: -32px;
-  top: 7%;
-  /*top: 5.5%;*/
-  right: 17px;
-  opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0);
-}
+
 
 ul.dropdown-content{
     top: 100% !important;
@@ -526,7 +517,16 @@ ul.dropdown-content{
 .btn-language .material-icons{
   font-size: 20px !important;
 }
-
+.language{
+  position: fixed;
+  z-index: 9999;
+  margin-top: -32px;
+  top: 7%;
+  /*top: 5.5%;*/
+  right: 17px;
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+}
 .language-desc {
     position: fixed;
     z-index: 9999;
