@@ -17,6 +17,11 @@
  *
  * @package WordPress
  */
+//"Driver={MySQL ODBC 5.1 Driver};
+//Server=MYSQL5018.SmarterASP.NET;
+//Database=db_a1fdad_egc;
+//Uid=a1fdad_egc;
+//Password=YOUR_DB_PASSWORD"
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
