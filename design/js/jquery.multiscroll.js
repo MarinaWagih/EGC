@@ -98,29 +98,29 @@
 		$('.ms-right').css({
 			'width': '50%',
 			'position': 'absolute',
-			'height': '100%',
-			'-ms-touch-action': 'none'
+			'height': '100%'
+			// '-ms-touch-action': 'none'
 		});
 
 		$('.ms-left').css({
 			'width': '50%',
 			'position': 'absolute',
-			'height': '100%',
-			'-ms-touch-action': 'none'
+			'height': '100%'
+			// '-ms-touch-action': 'none'
 		});
 
 		$('.ms-right').css({
 			'right': '1px', //http://stackoverflow.com/questions/23675457/chrome-and-opera-creating-small-padding-when-using-displaytable
-			'top': '0',
-			'-ms-touch-action': 'none',
-			'touch-action': 'none'
+			'top': '0'
+			// '-ms-touch-action': 'none',
+			// 'touch-action': 'none'
 		});
 
 		$('.ms-left').css({
 			'left': '0',
-			'top': '0',
-			'-ms-touch-action': 'none',
-			'touch-action': 'none'
+			'top': '0'
+			// '-ms-touch-action': 'none',
+			// 'touch-action': 'none'
 		});
 
 
