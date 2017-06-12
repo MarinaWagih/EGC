@@ -24,7 +24,7 @@
             <div class="wrap">
                 <div class="type-wrap">
                     <div id="typed-strings">
-                        <p><?php echo get_option('egc_slogan');?></p>
+                        <p><?php pll_e('egc_slogan');?></p>
                     </div>
                     <span id="typed" style=""></span>
                 </div>

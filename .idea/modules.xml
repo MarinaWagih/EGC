@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/egc.iml" filepath="$PROJECT_DIR$/.idea/egc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/egc-wp.iml" filepath="$PROJECT_DIR$/.idea/egc-wp.iml" />
     </modules>
   </component>
 </project>

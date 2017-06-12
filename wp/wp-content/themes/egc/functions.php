@@ -68,13 +68,13 @@ add_filter('the_generator','egc_remove_wp_version');
  */
 function egc_custom_post_type(){
     $labels=[
-        'name'=>'packages',//actual name
-        'singular_name'=>'package',//name used inside admin panel
-        'all_item'=>'all packages',//
-        'add_new'=>'add New package',//btn to add new
-        'add_new_item'=>'add package',//
-        'edit_item'=>'edit package',
-        'view_item'=>'view package',
+        'name'=>'plans',//actual name
+        'singular_name'=>'plan',//name used inside admin panel
+        'all_item'=>'all plans',//
+        'add_new'=>'add New plan',//btn to add new
+        'add_new_item'=>'add plan',//
+        'edit_item'=>'edit plan',
+        'view_item'=>'view plan',
         'search_item'=>'search',
         'not_found'=>'not found',
         'not_found_in_trash'=>'not found in trash',
@@ -92,71 +92,13 @@ function egc_custom_post_type(){
         ),
 		'taxonomies' => array('category','post_tag'),
 		'menu_position' => 5,
+		'menu_icon' => "dashicons-networking",
 		'exclude_from_search' => true
 	];
 	register_post_type('packages',$args);
 }
 
 add_action('init','egc_custom_post_type');
-/**
- *===================================
- * Custome taxonomi
- *===================================
- */
-/**
- *
- //function egc_custom_taxonomy()
-//{
-//    // ***********   internet *****************
-//    //*****************************************
-//    $internet_labels=[
-//      'name'=>'internet',
-//      'singular_name'=>'internet',
-//
-//    ];
-//    $internet_args = [
-//        'hierarchical' => false,
-//		'labels' => $internet_labels,
-//		'rewrite' => array( 'slug' => 'internet' )
-//	];
-//	register_taxonomy('internet', array('internet'), $internet_args);
-//    //*****************************************
-//    //*****************************************
-//
-//    // ***********  phone *********************
-//    //*****************************************
-//    $phone_labels=[
-//      'name'=>'phone',
-//      'singular_name'=>'phone',
-//
-//    ];
-//    $phone_args = [
-//        'hierarchical' => false,
-//		'labels' => $phone_labels,
-//		'rewrite' => array( 'slug' => 'phone' )
-//	];
-//	register_taxonomy('phone', array('phone'), $phone_args);
-//    //*****************************************
-//    //*****************************************
-//
-//    // ***********  phone&internet *********************
-//    //*****************************************
-//    $phone_internet_labels=[
-//      'name'=>'phone&internet',
-//      'singular_name'=>'phone&internet',
-//
-//    ];
-//    $phone_internet_args = [
-//        'hierarchical' => false,
-//		'labels' => $phone_internet_labels,
-//		'rewrite' => array( 'slug' => 'phone-internet' )
-//	];
-//	register_taxonomy('phone_internet', array('phone_internet'), $phone_internet_args);
-//
-//}
-//add_action( 'init' , 'myTheme_custom_taxonomy' );
-**/
-
 /**
  * Add package custom fields
  */
@@ -203,16 +145,13 @@ function egc_save_package_custom_fields(){
         update_post_meta($post->ID, "price_after", @$_POST["price_after"]);
         update_post_meta($post->ID, "speed", @$_POST["speed"]);
     }
-//    var_dump(get_post_meta($post->ID),@$_POST);die();
 }
 add_action( 'admin_init', 'egc_add_package_meta_boxes' );
 add_action( 'save_post', 'egc_save_package_custom_fields' );
 load_theme_textdomain( 'egc', TEMPLATEPATH.'/lang' );
-
 /**
  * Option page
  */
-
 function egc_theme_settings_page(){
     ?>
     <div class="wrap">
@@ -231,48 +170,17 @@ function egc_theme_settings_page(){
 function add_theme_menu_item()
 {
     add_menu_page("EGC data",
-                  "EGC data",
-                  "manage_options",
-                  "theme-data",
-                  "egc_theme_settings_page",
-                  null, 99);
+        "EGC data",
+        "manage_options",
+        "theme-data",
+        "egc_theme_settings_page",
+        null, 99);
 }
 
 add_action("admin_menu", "add_theme_menu_item");
 
-function egc_display_slogan_element()
-{
-?>
-        <input type="text"
-               name="egc_slogan"
-               id="egc_slogan"
-               style="    width: 100%;height: 35px;"
-               value="<?php echo get_option('egc_slogan'); ?>" />
-<?php
-}
-function egc_display_about_title_element()
-{
-?>
-        <input type="text"
-               name="about_title"
-               id="about_title"
-               style="    width: 100%;height: 35px;"
-               value="<?php echo get_option('about_title'); ?>" />
 
-<?php
-}
-function egc_display_about_content_element()
-{
-    ?>
-    <textarea
-           name="about_content"
-           id="about_content"
-           style="width: 100%;"
-           rows="10"
-        ><?php echo get_option('about_content'); ?></textarea>
 
-<?php
-}
 function egc_display_phones_element()
 {
     ?>
@@ -325,18 +233,6 @@ function egc_display_theme_panel_fields()
 {
     add_settings_section("section", "", null, "theme-data");
 
-    add_settings_field("egc_slogan", "egc slogan in home page",
-        "egc_display_slogan_element", "theme-data", "section");
-    register_setting("section", "egc_slogan");
-
-    add_settings_field("about_title", "About us section title",
-        "egc_display_about_title_element", "theme-data", "section");
-    register_setting("section", "about_title");
-
-    add_settings_field("about_content", "About us section content",
-        "egc_display_about_content_element", "theme-data", "section");
-    register_setting("section", "about_content");
-
     add_settings_field("phones", 'phones separated by " , " ',
         "egc_display_phones_element", "theme-data", "section");
     register_setting("section", "phones");
@@ -357,3 +253,11 @@ function egc_display_theme_panel_fields()
 
 add_action("admin_init", "egc_display_theme_panel_fields");
 
+function egc_my_pll_get_post_types($types) {
+    return array_merge($types, array('packages' => 'packages'));
+}
+add_filter('pll_get_post_types', 'egc_my_pll_get_post_types');
+//
+pll_register_string('egc','egc_slogan','egc');
+pll_register_string('egc','about_title','egc');
+pll_register_string('egc','about_content','egc',true);

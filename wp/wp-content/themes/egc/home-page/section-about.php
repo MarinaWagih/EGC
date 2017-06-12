@@ -9,10 +9,10 @@
 <div class="section" id="about">
     <div class="content-after-particles">
         <i class="icon fa fa-4x fa-info-circle"></i>
-        <h1><?php echo get_option('about_title');?></h1>
+        <h1><?php pll_e('about_title');?></h1>
         <div class="divider-about"></div>
         <p>
-            <?php echo get_option('about_content');?>
+            <?php pll_e('about_content');?>
         </p>
     </div>
 </div>
