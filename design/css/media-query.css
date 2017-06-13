@@ -10,10 +10,21 @@
 }*/
 
 @media screen and (max-width: 860px) {
+.carousel .indicators {
+    bottom: 14%;
+}
   .language-desc ,.language{
-    top: 3%;
+    top: 5.5%;
     /*right: 17px;*/
 }
+.btn-language .material-icons{
+    line-height: 1;
+}
+
+.ps-content h2 {
+    padding: 0px 15px;
+}
+
   .ps-slidewrapper > nav > a:first-child {
       box-shadow: inset 0 0 0 9999px rgba(233,217,141,0.8);
       /*width: 100%;*/
@@ -61,7 +72,7 @@
 	}
 
   .js .ps-header {
-      height: 50px;
+      height: 40px;
   }
   .desc-page .btn-back{
       float: left;
@@ -69,7 +80,7 @@
       height: 50px;
   }
 	.js .ps-header h1 {
-    line-height: 50px;
+    line-height: 40px;
     font-size: 20px;
 	}
 
@@ -80,6 +91,7 @@
   .icon-pricing {
     font-size: 50px !important;
     padding: 10px !important;
+    top: 22%;
   }
 
   .js .ps-slidewrapper > nav {
@@ -88,20 +100,20 @@
 
   .js .ps-contentwrapper {
       top: auto;
-      height: 480px;
+      height: 495px;
       bottom: 60px;
   }
   .ps-slidewrapper > nav > a.ps-prev:after {
     width: 30px;
     height: 30px;
-    top: 129%;
-    /*left: 111%;*/
+    top: 95%;
+    left: 55%;
   }
   .ps-slidewrapper > nav > a.ps-next:after {
     width: 30px;
     height: 30px;
-    top: 60%;
-    /*left: 111%;*/
+    top: 70%;
+    left: 55%;
   }
   .carousel .indicators .indicator-item {
     margin: 10px 4px;

@@ -22,12 +22,12 @@
 
 .ps-container > .ps-slidewrapper {
 	position: absolute;
-	width: 25%;
+	width: 15%;
 }
 
 .ps-container > .ps-contentwrapper, .ps-container > .ps-header {
 	position: absolute;
-	width: 75%;
+	width: 85%;
 }
 
 .ps-container > div > div,
@@ -39,23 +39,23 @@
 .ps-header {
 	top: 0px;
 	left: 0px;
-	height: 60px;
+	height: 45px;
 	z-index: 1001;
 	background: #fff;
 }
 
 .ps-header h1 {
 	color: #ccc;
-	line-height: 60px;
+	line-height: 45px;
 	margin: 0;
 	padding: 0 60px;
-  font-weight: 200;
-  font-size: 25px;
-  letter-spacing: 15px;
+	font-weight: 200;
+	font-size: 25px;
+	letter-spacing: 15px;
 }
 
 .ps-contentwrapper {
-	top: 70px;
+	top: 45px;
 	bottom: 0px;
 	overflow: hidden;
 	z-index: 1000;
@@ -172,12 +172,16 @@
 	height: 100%;
 	position: relative;
 	float: left;
-	box-shadow: inset 0 0 0 9999px rgba(207,227,206,0.8);
-	outline: none;
+	/*box-shadow: inset 0 0 0 9999px rgba(207,227,206,0.8);
+	outline: none;*/
+	box-shadow: inset 0 0 0 9999px #082a46;
+    outline: none;
+    border-left: 2px solid #041625;
 }
 
 .ps-slidewrapper > nav > a:first-child {
-	box-shadow: inset 0 0 0 9999px rgba(233,217,141,0.8);
+	/*box-shadow: inset 0 0 0 9999px rgba(233,217,141,0.8);*/
+	box-shadow: inset 0 0 0 9999px  #082a46;
 }
 
 /*.no-touch .ps-slidewrapper > nav > a {
@@ -199,11 +203,11 @@
 .ps-slidewrapper > nav > a:after {
 	content: '';
 	position: absolute;
-  width: 80px;
-  height: 80px;
-  top: 50%;
-  left: 58%;
-	margin: -20px 0 0 -50px;
+    width: 30px;
+    height: 30px;
+    top: 59%;
+    left: 100%;
+	margin: -25px 0 0 -50px;
 	-webkit-transform: rotate(45deg);
 	-moz-transform: rotate(45deg);
 	-o-transform: rotate(45deg);
@@ -219,7 +223,7 @@
 	-o-transform: rotate(-135deg);
 	-ms-transform: rotate(-135deg);
 	transform: rotate(-135deg);
-	margin: -80px 0 0 -50px;
+	margin: -58px 0 0 -50px;
 }
 
 .ps-slides > div,
@@ -245,10 +249,12 @@
 }
 
 .ps-slidewrapper .bg-one{
-      background-color: #26596b;
+      /*background-color: #26596b;*/
+      background-color: #ff7153;
 }
 .ps-slidewrapper .bg-two{
-    background-color: #233237;
+    /*background-color: #233237;*/
+    background-color: #ffd64a;
 
 }
 .ps-slidewrapper .bg-three{
