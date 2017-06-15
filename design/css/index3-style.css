@@ -505,14 +505,17 @@ span.new.badge.egc {
 
 .desc-page .btn-back{
     float: left;
-    padding: 10px 4px;
+    padding: 5px 4px;
+    border: 1px solid #efefef;
     height: 60px;
     box-shadow: 0 2px 2px 0 rgba(166, 166, 166, 0), 0 1px 5px 0 rgba(163, 163, 163, 0), 0 3px 1px -2px rgba(188, 188, 188, 0);
 }
 .desc-page .btn-back i{
       font-size: 25px;
 }
-
+.home{
+    margin-right: 10px;
+}
 
 ul.dropdown-content{
     top: 100% !important;
@@ -669,7 +672,8 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 
 .detail-page .btn-back{
     float: left;
-    padding: 10px 4px;
+    padding: 7px 4px;
+    border: 1px solid #efefef;
     height: 60px;
     box-shadow: 0 2px 2px 0 rgba(166, 166, 166, 0), 0 1px 5px 0 rgba(163, 163, 163, 0), 0 3px 1px -2px rgba(188, 188, 188, 0);
 }
@@ -707,4 +711,19 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 }
 .detail-page .divider{
     margin-bottom: 10px;
+}
+.category{
+    float: right !important;
+}
+.list-category li a{
+    color: #9b647b;
+    font-weight: bold;
+}
+.list-category li a:hover,
+.list-category li a:active,
+.list-category li a:focus{
+    /*color: #d4cbbb;*/
+    color: #082a46;
+    /*color: #ff7153;*/
+    transition: all 300ms ease-in-out;
 }
