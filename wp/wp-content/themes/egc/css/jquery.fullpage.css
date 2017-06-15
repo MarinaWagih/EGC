@@ -217,9 +217,11 @@ html.fp-enabled {
 
 #fp-nav ul li .fp-tooltip {
     position: absolute;
-    top: -2px;
-    color: #fff;
-    font-size: 14px;
+    top: -8px;
+    color: #b99199;
+    font-size: 15px;
+     text-transform: uppercase;
+     font-weight: bold;
     font-family: arial, helvetica, sans-serif;
     white-space: nowrap;
     max-width: 220px;
