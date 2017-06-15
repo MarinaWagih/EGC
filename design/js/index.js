@@ -165,3 +165,71 @@ $(function() {
 // $('#mouse-click').click(function () {
 //       $('#').trigger('click')
 // });
+
+
+(function ($) {
+    "use strict";
+
+    /**
+     * jQuery plugin wrapper for compatibility with Angular UI.Utils: jQuery Passthrough
+     */
+    $.fn.tkSlickDefault = function () {
+
+        if (! this.length) return;
+
+        if (typeof $.fn.slick == 'undefined') return;
+
+        var c = this;
+
+        c.slick({
+            dots: false,
+            autoplay: true,
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            // arrows: false,
+            slidesToShow: 2,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                },
+                {
+                    breakpoint: 0,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ],
+        });
+
+      
+
+    };
+
+    $(".slick-packages").each(function () {
+        $(this).tkSlickDefault();
+    });
+
+})(jQuery);
