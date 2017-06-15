@@ -56,64 +56,77 @@ if (have_posts()): $i = 0;
                                             <div class="">
                                                 <div class="col s12 m4 side-sec ps-price">
                                                 <span class="col s6 m12 font-12">
-                                                    <strong class="block font-25 text-blue">$<?php get_post_meta(the_ID(),'price_before')?></strong>
-                                                    Starting from
+                                                    <del><strong class="block font-12">$<?php echo get_post_meta(get_the_ID(),'price_before',true)?>/M</strong></del>
+                                                    <strong class="block font-25 text-blue">$<?php echo get_post_meta(get_the_ID(),'price_after',true)?>/M</strong>
                                                 </span>
 
                                                     <div class="col s6 m12 ps-price speed border-top">
-                              <span class="number-big">5
-                                <strong class=" font-25 line-height">
-                                    Mbps
-                                </strong>
-                              </span>
-                              <span class="font-12">
-                                <span class="block line-height-12"> Download Speed</span>
-                              </span>
+                                                          <span class="number-big"><?php echo get_post_meta(get_the_ID(),'speed',true)?>
+                                                            <strong class=" font-25 line-height">
+                                                                Mbps
+                                                            </strong>
+                                                          </span>
+                                                          <span class="font-12">
+                                                            <span class="block line-height-12"> Download Speed</span>
+                                                          </span>
                                                     </div>
                                                 </div>
 
                                                 <div class="col s12 m4 bordered side-sec pay-now">
-                          <span class="title bold">
-                            payment
-                          </span>
-
-                                                    <div class="divider"></div>
-                          <span class="">
-                            # pay-now section
-                          </span>
+                                                      <span class="title bold">
+                                                        payment
+                                                      </span>
+                                                      <div class="divider"></div>
+                                                      <span class="">
+                                                        <?php echo do_shortcode('[livesite-pay label="Pay Now" payment_amount="10" title="buy now" class="btn-pay" show_icons]')?>
+                                                      </span>
 
                                                 </div>
-
                                                 <div class="col s12 m4 bordered side-sec">
-                          <span class="title bold">
-                            Tags
-                          </span>
-
+                                                  <span class="title bold">
+                                                    Tags
+                                                  </span>
                                                     <div class="divider"></div>
-                                                    <a href="#" class="chip egc-color">
-                                                        internet
-                                                    </a>
-                                                    <a href="#" class="chip egc-color">
-                                                        phone
-                                                    </a>
-                                                    <a href="#" class="chip egc-color">
-                                                        internet & phone
-                                                    </a>
-                                                    <a href="#" class="chip egc-color">
-                                                        Tag
-                                                    </a>
+                                                    <?php $tags=get_the_tags();
+                                                    foreach($tags as $tag)
+                                                    {
+                                                        ?>
+                                                        <a href="<?php echo get_tag_link($tag); ?>" class="chip egc-color">
+                                                            <?php echo $tag->name; ?>
+                                                        </a>
+                                                        <?php
+                                                    }
+                                                    ?>
+
                                                 </div>
 
                                                 <div class="col s12 m4 bordered side-sec category">
-                          <span class="title bold">
-                            Categories
-                          </span>
+                                                      <span class="title bold">
+                                                        Categories
+                                                      </span>
 
                                                     <div class="divider"></div>
                                                     <ul class="list-category">
-                                                        <li><a href="#">internet</a></li>
-                                                        <li><a href="#">phone</a></li>
-                                                        <li><a href="#">internet & phone</a></li>
+                                                        <?php
+                                                        $categories = get_categories( array(
+                                                            'orderby' => 'name',
+                                                        ) );
+
+                                                        foreach ( $categories as $category ) {
+                                                            ?>
+                                                            <li>
+                                                                <a href="<?php  echo esc_url( get_category_link( $category->term_id ) );?>">
+                                                                   <?php echo esc_html( $category->name );?>
+                                                                </a>
+                                                            </li>
+
+
+
+
+                                                            <?php
+                                                        }
+                                                        ?>
+
                                                     </ul>
                                                 </div>
                                             </div>

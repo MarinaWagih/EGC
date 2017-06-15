@@ -7,7 +7,6 @@
  */
 ?>
 <div class="section" id="contact">
-<?php //echo do_shortcode('[livesite-pay label="Pay Now" payment_amount="10" title="buy now" class="btn-pay" show_icons]')?>
     <div class="row">
         <div class="col s12 m12">
             <div class="col s12 m3 image-about"></div>
