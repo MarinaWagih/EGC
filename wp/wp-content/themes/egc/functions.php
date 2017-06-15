@@ -261,3 +261,8 @@ add_filter('pll_get_post_types', 'egc_my_pll_get_post_types');
 pll_register_string('egc','egc_slogan','egc');
 pll_register_string('egc','about_title','egc');
 pll_register_string('egc','about_content','egc',true);
+pll_register_string('egc','contact_us_title','egc');
+pll_register_string('egc','phones','egc');
+pll_register_string('egc','address','egc');
+pll_register_string('egc','email','egc');
+pll_register_string('egc','fax','egc');
