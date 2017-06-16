@@ -12,16 +12,15 @@ if (have_posts()): $i = 0;
         ?>
 
 
-        <div id="detail-page">
+        <div class="detail-page">
             <div class="section" id="packages">
                 <section id="ps-container" class="ps-container">
 
                     <div class="ps-header">
 
                         <h1>
-                            <a class=" btn white secondary-content waves-effect waves-white btn-egc btn-back home"
-                               href="<?php echo get_home_url() ?>">
-                                <i class="material-icons">home</i>
+                            <a href="<?php echo get_home_url() ?>">
+                                <img src="<?php echo get_template_directory_uri()?>/images/logo-EGC-04.png" alt="fullPage" class="logo" class="width-100px"/>
                             </a>
                             <a class=" btn white secondary-content waves-effect waves-white btn-egc btn-back"
                                href="<?php echo esc_url($category_link); ?>">
@@ -35,7 +34,7 @@ if (have_posts()): $i = 0;
                         <!-- INTERNET -->
                         <div class="ps-content">
 
-                            <h2>  <?php the_category(); ?></h2>
+                            <h2>  <?php echo $category_Name ?></h2>
 
                             <div class="row">
                                 <div id="test1" class="" data-indicators="true">
@@ -53,15 +52,26 @@ if (have_posts()): $i = 0;
                                                 </div>
                                                 <!--                                            <span class="new badge egc">Data Transfer Download 75Gb</span>-->
                                             </div>
-                                            <div class="">
-                                                <div class="col s12 m4 side-sec ps-price">
+                                            <div class="col s12 m4">
+                                                <div class="col s12 m12 side-sec ps-price">
                                                 <span class="col s6 m12 font-12">
-                                                    <del><strong class="block font-12">$<?php echo get_post_meta(get_the_ID(),'price_before',true)?>/M</strong></del>
-                                                    <strong class="block font-25 text-blue">$<?php echo get_post_meta(get_the_ID(),'price_after',true)?>/M</strong>
+                                                       <?php if(get_post_meta(get_the_ID(),'price_before',true)){ ?>
+                                                           <del>
+                                                        <span class="block font-12">
+                                                            $<?php echo get_post_meta(get_the_ID(),'price_before',true)?>/ month
+                                                        </span>
+                                                           </del>
+                                                       <?php }?>
+                                                    <strong class="block font-25 text-blue">
+                                                        $<?php echo get_post_meta(get_the_ID(),'price_after',true)?>
+                                                        <span class="text-blue">/ month </span>
+                                                    </strong>
+
                                                 </span>
 
                                                     <div class="col s6 m12 ps-price speed border-top">
-                                                          <span class="number-big"><?php echo get_post_meta(get_the_ID(),'speed',true)?>
+                                                          <span class="number-big">
+                                                              <?php echo get_post_meta(get_the_ID(),'speed',true)?>
                                                             <strong class=" font-25 line-height">
                                                                 Mbps
                                                             </strong>
@@ -72,7 +82,7 @@ if (have_posts()): $i = 0;
                                                     </div>
                                                 </div>
 
-                                                <div class="col s12 m4 bordered side-sec pay-now">
+                                                <div class="col s12 m12 bordered side-sec pay-now">
                                                       <span class="title bold">
                                                         payment
                                                       </span>
@@ -82,7 +92,7 @@ if (have_posts()): $i = 0;
                                                       </span>
 
                                                 </div>
-                                                <div class="col s12 m4 bordered side-sec">
+                                                <div class="col s12 m12 bordered side-sec">
                                                   <span class="title bold">
                                                     Tags
                                                   </span>
@@ -100,7 +110,7 @@ if (have_posts()): $i = 0;
 
                                                 </div>
 
-                                                <div class="col s12 m4 bordered side-sec category">
+                                                <div class="col s12 m14 bordered side-sec category">
                                                       <span class="title bold">
                                                         Categories
                                                       </span>

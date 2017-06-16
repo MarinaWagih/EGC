@@ -9,45 +9,97 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+    <div class="desc-page">
+        <div class="section" id="packages">
+            <section id="ps-container" class="ps-container">
 
-		<?php
-		if ( have_posts() ) : ?>
+                <div class="ps-header">
 
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+                    <h1>
+                        <a href="<?php echo get_home_url() ?>">
+                            <img src="<?php echo get_template_directory_uri() ?>/images/logo-EGC-04.png" alt="fullPage"
+                                 class="logo" class="width-100px"/>
+                        </a>
+                    </h1>
+                </div>
+                <!-- /ps-header -->
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-                echo 'djkdshvj';
+                <div class="ps-contentwrapper data-section">
+                    <!-- INTERNET -->
+                    <div class="ps-content">
+                        <h2><?php the_archive_title() ?></h2>
+
+                        <div class="row">
+                            <div id="test1" class="" data-indicators="true">
+                                <?php
+                                if (have_posts()): $i = 0;
+                                    while (have_posts()): the_post();
+
+                                        ?>
 
 
-                /*
-                 * Include the Post-Format-specific template for the content.
-                 * If you want to override this in a child theme, then include a file
-                 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-                 */
-//				get_template_part( 'template-parts/content', get_post_format() );
-                var_dump(the_post());
-			endwhile;
+                                            <div class=" ">
+                                                <div class="col s12 m12 bordered padding-15">
+                                                  <span class="title bold">
+                                                      <?php the_title() ?>
+                                                  </span>
 
-			the_posts_navigation();
+                                                    <div class="divider"></div>
+                                                    <div class="col s12 m4 ps-price">
+                                                      <span class="col s6 m12 font-12">
+                                                          <?php if(get_post_meta(get_the_ID(),'price_before',true)){ ?>
+                                                         <del>
+                                                        <span class="block font-12">
+                                                            $<?php echo get_post_meta(get_the_ID(),'price_before',true)?>/ month
+                                                        </span>
+                                                         </del>
+                                                         <?php }?>
+                                                    <strong class="block font-25 text-blue">
+                                                        $<?php echo get_post_meta(get_the_ID(),'price_after',true)?>
+                                                        <span class="text-blue">/ month </span>
+                                                    </strong>
+                                                      </span>
 
-		else :
+                                                        <div class="col s6 m12 ps-price speed border-top">
+                                            <span class="number-big">
+                                                <?php echo get_post_meta(get_the_ID(),'speed',true)?>
+                                              <strong class=" font-25 line-height">
+                                                  Mbps
+                                              </strong>
+                                            </span>
+                                            <span class="font-12">
+                                              <span class="block line-height-12"> Download Speed</span>
+                                            </span>
+                                                        </div>
+                                                    </div>
 
-//			get_template_part( 'template-parts/content', 'none' );
-echo 'djfksdnfc';
-		endif; ?>
+                                                    <div class="col s12 m8 desc">
+                                                        <div class="margin-bottom">
+                                                           <?php the_excerpt()?>
+                                                        </div>
+<!--                                                        <span class="new badge egc">Data Transfer Download 75Gb</span>-->
+                                                        <a class="btn-egc" href="<?php get_permalink(get_the_ID()); ?>">
+                                                            More Details
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                <?php
+                                        $i++;
+                                    endwhile;
+                                endif; ?>
+                            </div>
+                        </div>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+                    </div>
+                </div>
+                <!-- /ps-contentwrapper -->
+
+            </section>
+            <!-- /ps-container -->
+        </div>
+    </div>
 
 <?php
-get_sidebar();
 get_footer();
+?>
