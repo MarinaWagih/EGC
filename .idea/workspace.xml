@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="900e83b6-1a46-4d46-9673-2d04326d4e7e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp/wp-content/themes/egc/page.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp/wp-content/themes/egc/search.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp/wp-content/themes/egc/archive.php" afterPath="$PROJECT_DIR$/wp/wp-content/themes/egc/archive.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp/wp-content/themes/egc/functions.php" afterPath="$PROJECT_DIR$/wp/wp-content/themes/egc/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp/wp-content/themes/egc/single.php" afterPath="$PROJECT_DIR$/wp/wp-content/themes/egc/single.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp/wp-config.php" afterPath="$PROJECT_DIR$/wp/wp-config.php" />
     </list>
     <ignored path="egc-wp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,14 +46,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="archive.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0776699" vertical-offset="0" max-vertical-offset="618">
+              <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="archive.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp/wp-content/themes/egc/archive.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.91608393" vertical-offset="1396" max-vertical-offset="2640">
+            <state vertical-scroll-proportion="-15.878788" vertical-offset="1396" max-vertical-offset="2640">
               <caret line="80" column="65" selection-start-line="80" selection-start-column="65" selection-end-line="80" selection-end-column="65" />
               <folding>
                 <element signature="e#6#136#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wp-config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp/wp-config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-53.090908" vertical-offset="0" max-vertical-offset="1896">
+              <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -93,6 +110,8 @@
         <option value="$PROJECT_DIR$/wp/wp-content/plugins/egc-plugin/egc-plugin.php" />
         <option value="$PROJECT_DIR$/wp/wp-content/themes/egc/single.php" />
         <option value="$PROJECT_DIR$/wp/wp-content/themes/egc/archive.php" />
+        <option value="$PROJECT_DIR$/wp/wp-config.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -394,7 +413,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24940239" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24940239" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -758,13 +777,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp/wp-config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.91608393" vertical-offset="172" max-vertical-offset="2040">
-          <caret line="46" column="2" selection-start-line="46" selection-start-column="2" selection-end-line="46" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp/wp-content/themes/egc/home-page/section-contact.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37762237" vertical-offset="0" max-vertical-offset="1848">
@@ -824,21 +836,6 @@
           <folding>
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp/wp-content/themes/egc/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.272728" vertical-offset="183" max-vertical-offset="864">
-          <caret line="75" column="39" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
-          <folding>
-            <element signature="e#89#190#0#PHP" expanded="false" />
-            <element signature="n#egc_script_enqueue#0;n#!!top" expanded="false" />
-            <element signature="e#2185#2302#0#PHP" expanded="false" />
-            <element signature="e#2352#2464#0#PHP" expanded="false" />
-            <element signature="n#egc_remove_wp_version#0;n#!!top" expanded="false" />
-            <element signature="n#egc_my_pll_get_post_types#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -903,11 +900,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp/wp-content/themes/egc/archive.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.91608393" vertical-offset="1396" max-vertical-offset="2640">
+        <state vertical-scroll-proportion="-15.878788" vertical-offset="1396" max-vertical-offset="2640">
           <caret line="80" column="65" selection-start-line="80" selection-start-column="65" selection-end-line="80" selection-end-column="65" />
           <folding>
             <element signature="e#6#136#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp/wp-config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-53.090908" vertical-offset="0" max-vertical-offset="1896">
+          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp/wp-content/themes/egc/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.272728" vertical-offset="183" max-vertical-offset="864">
+          <caret line="75" column="39" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
+          <folding>
+            <element signature="e#89#190#0#PHP" expanded="false" />
+            <element signature="n#egc_script_enqueue#0;n#!!top" expanded="false" />
+            <element signature="e#2185#2302#0#PHP" expanded="false" />
+            <element signature="e#2352#2464#0#PHP" expanded="false" />
+            <element signature="n#egc_remove_wp_version#0;n#!!top" expanded="false" />
+            <element signature="n#egc_my_pll_get_post_types#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0776699" vertical-offset="0" max-vertical-offset="618">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
