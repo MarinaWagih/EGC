@@ -282,7 +282,7 @@
   margin: 2px 0 6px;
   text-align: left;
   font-weight: 300;
-  display: block;
+  /*display: block;*/
 }
 .divider {
     height: 2px;

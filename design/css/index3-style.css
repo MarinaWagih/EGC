@@ -733,6 +733,19 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
     width: 100px;
 }
 
+.ls-payment-button.livesite-pay.btn-pay {
+    box-shadow: 0 2px 2px 0 rgba(91, 90, 90, 0.14), 0 1px 5px 0 rgba(106, 106, 106, 0.12), 0 3px 1px -2px rgba(99, 99, 99, 0.2);
+    border: 0px;
+    border-radius: 0px;
+    background: #ecc798;
+    color: #fff;
+}
+.ls-payment-button.livesite-pay.btn-pay:hover,
+ .ls-payment-button.livesite-pay.btn-pay:focus,
+ .ls-payment-button.livesite-pay.btn-pay:active{
+    background: #d0af85;
+    color: #fff;
+}
 /*======================= error page =========================*/
 /*.home-img{
         margin: 3em 0;

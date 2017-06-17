@@ -39,7 +39,7 @@ get_header(); ?>
 
 
                                             <div class=" ">
-                                                <div class="col s12 m12 bordered padding-15">
+                                                <div class="col s12 m6 bordered padding-15">
                                                   <span class="title bold">
                                                       <?php the_title() ?>
                                                   </span>

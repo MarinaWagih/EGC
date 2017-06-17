@@ -38,10 +38,8 @@ $result = [];
                                 while ($packages->have_posts()):$packages->the_post();?>
                                     <div class="item">
                                         <div class="col s12 m12 bordered padding-15">
-                                             <span class="title bold">
-                                                 <?php the_title() ?>
-                                             </span>
-                                             <div class="divider"></div>
+                                            
+                                             
                                              <div class="col s12 m12 ps-price">
                                                   <span class="col s6 m6 font-12">
                                                      <?php if (get_post_meta(get_the_ID(), 'price_before', true)) { ?>
@@ -70,6 +68,10 @@ $result = [];
                                                         </span>
                                                   </div>
                                             </div>
+                                             <span class="title bold">
+                                                 <?php the_title() ?>
+                                             </span>
+                                             <div class="divide"></div>
                                             <div class="col s12 m12 desc">
                                                 <span class="new badge egc"> 75Gb</span>
                                                 <a class="btn-egc" href="detail.html">
