@@ -732,3 +732,109 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 .width-100px{
     width: 100px;
 }
+
+/*======================= error page =========================*/
+/*.home-img{
+        margin: 3em 0;
+}
+.error-title{
+    font-size: 3rem;
+}*/
+
+.error-page .ps-container{
+    /*background: #9b647b !important;*/
+    background: #fff !important;
+}
+
+.error-page .ps-container > div > div, 
+.error-page  .ps-slidewrapper > nav,
+.error-page  .ps-slides > div {
+    position: relative;
+}
+.text-wrapper {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.title-error {
+    font-size: 9em;
+    font-weight: 700;
+    /*color: white;*/
+    color: #9b647b; 
+    position: relative;
+}
+
+.subtitle-error {
+  font-size: 30px;
+  font-weight: 700;
+  /*color: white;*/
+  /*color: #cfa44f;*/
+  color: #9b647b;
+  position: relative;
+}
+
+.button-error {
+  margin: 30px;
+}
+.button-error .btn{
+    color: #ffffff;
+    background-color: #cfa44f;
+
+}
+.buttons-error a.button {
+  background-color: #342643;
+  font-weight: 700;
+  border: 2px solid white;
+  text-decoration: none;
+  padding: 15px;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 26px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.buttons-error a.button:hover {
+  background-color: #4d3864;
+  color: white;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.subtitle:after, .title:after {
+  content: attr(data-content);
+  position: absolute;
+  left: 2px;
+  text-shadow: -1px 0 red;
+  top: 0;
+  color: white;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  /*-webkit-animation: noise-anim 2s infinite linear alternate-reverse;*/
+    /*animation: noise-anim 2s infinite linear alternate-reverse;*/
+}
+
+
+.subtitle:before, .title:before {
+  content: attr(data-content);
+  position: absolute;
+  left: -2px;
+  text-shadow: 1px 0 blue;
+  top: 0;
+  color: white;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  /*-webkit-animation: noise-anim-2 3s infinite linear alternate-reverse;*/
+          /*animation: noise-anim-2 3s infinite linear alternate-reverse;*/
+}
