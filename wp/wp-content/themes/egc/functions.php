@@ -20,6 +20,7 @@ function egc_script_enqueue()
     wp_enqueue_style('google-material-icons','https://fonts.googleapis.com/icon?family=Material+Icons',[],'','all');
     wp_enqueue_style('materialize','https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css',[],'','all');
     wp_enqueue_style('font-Dosis','https://fonts.googleapis.com/css?family=Dosis:200,400,700',[],'','all');
+    wp_enqueue_style('slick-css','https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.css',[],'','all');
 
     wp_enqueue_style('jquery-fullpage',get_template_directory_uri().'/css/jquery.fullpage.css',[],'','all');
     wp_enqueue_style('verticalslider' ,get_template_directory_uri().'/css/verticalslider.css',[],'','all');
@@ -29,6 +30,7 @@ function egc_script_enqueue()
 
     wp_enqueue_script('my-jquery','https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js',[],'',true);
     wp_enqueue_script('particles_js','https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js',[],'',true);
+    wp_enqueue_script('slick','https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js',[],'3.2.0',true);
     wp_enqueue_script('materialize_js','https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js',[],'3.2.0',true);
     wp_enqueue_script('typed_js',get_template_directory_uri().'/js/typed.min.js',[],'',true);
     wp_enqueue_script('fullPage_js',get_template_directory_uri().'/js/jquery.fullPage.min.js',[],'',true);

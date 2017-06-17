@@ -221,7 +221,7 @@ $(function() {
                         slidesToShow: 1
                     }
                 }
-            ],
+            ]
         });
 
       

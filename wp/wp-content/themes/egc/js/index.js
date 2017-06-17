@@ -21,6 +21,9 @@ document.addEventListener('DOMContentLoaded', function(){
 
 });
 
+function newTyped(){ /* A new typed object */ }
+
+function foo(){ console.log("Callback"); }
 //Particles
 
 $(function() {
@@ -29,133 +32,204 @@ $(function() {
 
 });
 
-$(document).ready(function () {
-  $('#fullpage').fullpage({
-      menu: null,
-      direction: 'vertical',
-      verticalCentered: true,
-      scrollingSpeed: 700,
-      easing: 'swing',
-      loopBottom: true,
-      loopTop: true,
-      css3: true,
-      navigation: true,
-      navigationPosition: 'left',
-      navigationTooltips: ['home', 'packages', 'about', 'contact'],
-      keyboardScrolling: true,
-      sectionSelector: '.section'
+  $(document).ready(function () {
+      $('#fullpage').fullpage({
+          menu: null,
+          direction: 'vertical',
+          verticalCentered: true,
+          scrollingSpeed: 700,
+          easing: 'swing',
+          loopBottom: true,
+          loopTop: true,
+          css3: true,
+          navigation: true,
+          navigationPosition: 'left',
+          navigationTooltips: ['home', 'packages', 'about', 'contact'],
+          keyboardScrolling: true,
+          sectionSelector: '.section'
+      });
   });
-    if ( $( "#particles-js" ).length ) {
-        particlesJS("particles-js", {
-            "particles": {
-                "number": {
-                    "value": 400,
-                    "density": {
-                        "enable": true,
-                        "value_area": 2500
-                    }
-                },
-                "color": {
-                    "value": "#ffffff"
-                },
-                "shape": {
-                    "type": "circle",
-                    "stroke": {
-                        "width": 0,
-                        "color": "#000000"
-                    },
-                    "polygon": {
-                        "nb_sides": 5
-                    },
-                    "image": {
-                        "src": "img/github.svg",
-                        "width": 100,
-                        "height": 100
-                    }
-                },
-                "opacity": {
-                    "value": 0.8,
-                    "random": false,
-                    "anim": {
-                        "enable": false,
-                        "speed": 1,
-                        "opacity_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "size": {
-                    "value": 3,
-                    "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 40,
-                        "size_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "line_linked": {
+
+  $(document).ready(function (){
+    particlesJS("particles-js", {
+        "particles": {
+            "number": {
+                "value": 400,
+                "density": {
                     "enable": true,
-                    "distance": 150,
-                    "color": "#ffffff",
-                    "opacity": 0.1,
-                    "width": 1
+                    "value_area": 2500
+                }
+            },
+            "color": {
+                "value": "#ffffff"
+            },
+            "shape": {
+                "type": "circle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
                 },
-                "move": {
-                    "enable": true,
+                "polygon": {
+                    "nb_sides": 5
+                },
+                "image": {
+                    "src": "img/github.svg",
+                    "width": 100,
+                    "height": 100
+                }
+            },
+            "opacity": {
+                "value": 0.8,
+                "random": false,
+                "anim": {
+                    "enable": false,
                     "speed": 1,
-                    "direction": "none",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                        "enable": false,
-                        "rotateX": 600,
-                        "rotateY": 1200
-                    }
+                    "opacity_min": 0.1,
+                    "sync": false
                 }
             },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "grab"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    },
-                    "resize": true
+            "size": {
+                "value": 3,
+                "random": true,
+                "anim": {
+                    "enable": false,
+                    "speed": 40,
+                    "size_min": 0.1,
+                    "sync": false
+                }
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#ffffff",
+                "opacity": 0.1,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 1,
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                    "enable": false,
+                    "rotateX": 600,
+                    "rotateY": 1200
+                }
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "grab"
                 },
-                "modes": {
-                    "grab": {
-                        "distance": 140,
-                        "line_linked": {
-                            "opacity": 1
-                        }
-                    },
-                    "bubble": {
-                        "distance": 800,
-                        "size": 10,
-                        "duration": 2,
-                        "opacity": 3,
-                        "speed": 3
-                    },
-                    "repulse": {
-                        "distance": 200,
-                        "duration": 0.4
-                    },
-                    "push": {
-                        "particles_nb": 4
-                    },
-                    "remove": {
-                        "particles_nb": 2
+                "onclick": {
+                    "enable": true,
+                    "mode": "push"
+                },
+                "resize": true
+            },
+            "modes": {
+                "grab": {
+                    "distance": 140,
+                    "line_linked": {
+                        "opacity": 1
+                    }
+                },
+                "bubble": {
+                    "distance": 800,
+                    "size": 10,
+                    "duration": 2,
+                    "opacity": 3,
+                    "speed": 3
+                },
+                "repulse": {
+                    "distance": 200,
+                    "duration": 0.4
+                },
+                "push": {
+                    "particles_nb": 4
+                },
+                "remove": {
+                    "particles_nb": 2
+                }
+            }
+        },
+        "retina_detect": true
+    });
+  });
+// $('#mouse-click').click(function () {
+//       $('#').trigger('click')
+// });
+
+
+(function ($) {
+    "use strict";
+
+    /**
+     * jQuery plugin wrapper for compatibility with Angular UI.Utils: jQuery Passthrough
+     */
+    $.fn.tkSlickDefault = function () {
+
+        if (! this.length) return;
+
+        if (typeof $.fn.slick == 'undefined') return;
+
+        var c = this;
+
+        c.slick({
+            dots: false,
+            autoplay: true,
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            // arrows: false,
+            slidesToShow: 2,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                },
+                {
+                    breakpoint: 0,
+                    settings: {
+                        slidesToShow: 1
                     }
                 }
-            },
-            "retina_detect": true
+            ],
         });
-    }
-  $('.carousel.carousel-slider').carousel({fullWidth: true});
-});
+
+      
+
+    };
+
+    $(".slick-packages").each(function () {
+        $(this).tkSlickDefault();
+    });
+
+})(jQuery);
