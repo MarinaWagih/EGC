@@ -195,7 +195,7 @@ h1{
     color:#fff ;
 }
 #about p{
-    font-size: 30px;
+    font-size: 22px;
 }
 
 
@@ -851,3 +851,14 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
   /*-webkit-animation: noise-anim-2 3s infinite linear alternate-reverse;*/
           /*animation: noise-anim-2 3s infinite linear alternate-reverse;*/
 }
+
+/*---------------------*/
+.min-height-80px
+{
+    min-height:80px !important;
+}
+.vertical-align{
+    display: inline-flex;
+    align-items: center;
+}
+
