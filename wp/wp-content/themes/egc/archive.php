@@ -46,12 +46,12 @@ get_header(); ?>
 
                                                     <div class="divider"></div>
                                                     <div class="col s12 m4 ps-price">
-                                                      <span class="col s6 m12 font-12">
+                                                      <span class="col s6 m12 font-12 min-height-80px <?php echo (get_post_meta(get_the_ID(),'price_before',true))?"":"vertical-align" ?>">
                                                           <?php if(get_post_meta(get_the_ID(),'price_before',true)){ ?>
                                                          <del>
-                                                        <span class="block font-12">
-                                                            $<?php echo get_post_meta(get_the_ID(),'price_before',true)?>/ <?php pll_e('month');?>
-                                                        </span>
+                                                            <span class="block font-12">
+                                                                $<?php echo get_post_meta(get_the_ID(),'price_before',true)?>/ <?php pll_e('month');?>
+                                                            </span>
                                                          </del>
                                                          <?php }?>
                                                     <strong class="block font-25 text-blue">

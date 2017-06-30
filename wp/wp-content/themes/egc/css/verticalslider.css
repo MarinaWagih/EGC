@@ -249,30 +249,18 @@
     /*padding-bottom: 30px;*/
 }
 
-.ps-slidewrapper .bg-1{
+.ps-slidewrapper .bg-one{
       /*background-color: #26596b;*/
       background-color: #ff7153;
 }
-.ps-slidewrapper .bg-2{
+.ps-slidewrapper .bg-two{
     /*background-color: #233237;*/
     background-color: #ffd64a;
 
 }
-.ps-slidewrapper .bg-3{
+.ps-slidewrapper .bg-three{
   /*background-color: #985E6D;*/
   background-color: #00c6d7;
-}
-.ps-slidewrapper .bg-4{
-  /*background-color: #985E6D;*/
-  background-color: #821134;
-}
-.ps-slidewrapper .bg-5{
-  /*background-color: #985E6D;*/
-  background-color: forestgreen;
-}
-.ps-slidewrapper .bg-6{
-  /*background-color: #985E6D;*/
-  background-color: purple;
 }
 
 .ps-content .planes-link .title {
@@ -283,7 +271,7 @@
   margin: 6px 0 6px;
   text-align: center;
   font-weight: 300;
-  /*display: block;*/
+  display: block;
 }
 .divider {
     height: 2px;

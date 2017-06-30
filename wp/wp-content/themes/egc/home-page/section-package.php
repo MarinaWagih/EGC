@@ -11,22 +11,48 @@ $categories = get_terms(
 );
 ?>
 <div class="section" id="packages">
-        <div class="content-after-particles">
+    <section id="ps-container" class="ps-container">
+
+        <div class="ps-header">
             <h1><?php pll_e('planes');?></h1>
-            <div class="divider-about"></div>
-            <div class="collection">
-                <?php foreach ($categories as $i=>$category) {?>
+        </div>
+        <!-- /ps-header -->
 
-                        <a href="<?php  echo esc_url( get_category_link( $category->term_id ) );?>" class="collection-item">
-<!--                            <i class="material-icons icon-pricing">-->
-<!--                                --><?php //echo $category->term_font_icon?>
-<!--                            </i>-->
-                            <?php echo esc_html( $category->name );?>
-                        </a>
+        <div class="ps-contentwrapper">
+            <!-- INTERNET -->
+            <div class="ps-content">
+                <!--<a href="desc.html">
+                  <h2>INTERNET</h2>
+                </a>-->
+                <div class="row">
 
-                <?php
-                } ?>
+                    <div id="test1" class="center">
+                        <?php foreach ($categories as $i=>$category) {?>
+                            <div class="" href="#one!">
+                                <div class="col s12 m12 bordered">
+                                    <div class="col s12 m12">
+                                        <a href="<?php  echo esc_url( get_category_link( $category->term_id ) );?>" class="planes-link">
+                                          <span class="title bold">
+                                                <?php echo esc_html( $category->name );?>
+                                         </span>
+                                        </a>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        <?php
+                        } ?>
+                    </div>
+
+                </div>
 
             </div>
+
+
         </div>
-    </div>
+
+    </section>
+    <!-- /ps-container -->
+</div>

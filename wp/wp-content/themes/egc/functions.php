@@ -83,3 +83,33 @@ pll_register_string('egc','payment','egc');
 pll_register_string('egc','tags','egc');
 pll_register_string('egc','categories','egc');
 pll_register_string('egc','pricing','egc');
+pll_register_string('egc','planes','egc');
+
+
+function egc_pre_get_packages( $query ) {
+
+    // do not modify queries in the admin
+    if( is_admin() ) {
+
+        return $query;
+
+    }
+
+
+    // only modify queries for 'event' post type
+//    if( isset($query->query_vars['post_type']) &&
+//        $query->query_vars['post_type'] == 'packages' ) {
+
+        $query->set('orderby', 'meta_value');
+        $query->set('meta_key', 'speed');
+        $query->set('order', 'ASC');
+
+//    }
+
+
+    // return
+    return $query;
+
+}
+
+add_action('pre_get_posts', 'egc_pre_get_packages');

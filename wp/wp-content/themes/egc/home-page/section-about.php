@@ -12,7 +12,7 @@
         <h1><?php pll_e('about_title');?></h1>
         <div class="divider-about"></div>
         <p>
-            <?php pll_e('about_content');?>
+            <?php nl2br(pll_e('about_content'));?>
         </p>
     </div>
 </div>
