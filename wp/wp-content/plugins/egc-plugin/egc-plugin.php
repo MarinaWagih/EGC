@@ -65,18 +65,18 @@ function egc_add_package_details_meta_box()
     <p>
         <label>Price before sale:</label><br />
 
-        <input type="number" name="price_before" value="<?= @$custom["price_before"][0] ?>" class="width99" />
+        <input type="number" name="price_before" value="<?= @$custom["price_before"][0] ?>" class="width99" step="0.01" min="0" />
     </p>
 
     <p>
         <label>Price after sale:</label><br />
 
-        <input type="number" name="price_after" value="<?= @$custom["price_after"][0] ?>" class="width99" />
+        <input type="number" name="price_after" value="<?= @$custom["price_after"][0] ?>" class="width99" step="0.01" min="0" />
     </p>
     <p>
         <label>speed :</label><br />
 
-        <input type="number" name="speed" value="<?= @$custom["speed"][0] ?>" class="width99" />
+        <input type="number" name="speed" value="<?= @$custom["speed"][0] ?>" class="width99" step="0.01" min="0" />
     </p>
 <?php
 }

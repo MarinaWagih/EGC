@@ -12,7 +12,7 @@ $result = [];
     <section id="ps-container" class="ps-container">
 
         <div class="ps-header">
-            <h1>PRICING</h1>
+            <h1><?php pll_e('pricing');?></h1>
         </div>
         <!-- /ps-header -->
 
@@ -46,13 +46,13 @@ $result = [];
                                                          <del>
                                                                         <span class="block font-12">
                                                                             $<?php echo get_post_meta(get_the_ID(), 'price_before', true) ?>
-                                                                            / month
+                                                                            / <?php pll_e('month');?>
                                                                         </span>
                                                          </del>
                                                      <?php }?>
                                                       <strong class="block font-25 text-blue">
                                                           $<?php echo get_post_meta(get_the_ID(), 'price_after', true)?>
-                                                          <span class="text-blue">/ month </span>
+                                                          <span class="text-blue">/ <?php pll_e('month');?> </span>
                                                       </strong>
 
                                                   </span>
@@ -64,7 +64,7 @@ $result = [];
                                                           </strong>
                                                         </span>
                                                         <span class="font-12">
-                                                          <span class="block line-height-12"> Download Speed</span>
+                                                          <span class="block line-height-12"> <?php pll_e('download_speed');?></span>
                                                         </span>
                                                   </div>
                                             </div>
@@ -73,11 +73,12 @@ $result = [];
                                              </span>
                                              <div class="divide"></div>
                                             <div class="col s12 m12 desc">
-                                                <span class="new badge egc"> 75Gb</span>
-                                                <a class="btn-egc" href="detail.html">
-                                                    More Details
+                                                <div class="margin-bottom">
+                                                    <?php  the_excerpt(); ?>
+                                                </div>
+                                                <a class="btn-egc" href="<?php echo get_permalink(get_the_ID()); ?>">
+                                                    <?php pll_e('more_details');?>
                                                 </a>
-
                                             </div>
                                         </div>
                                     </div>
@@ -98,7 +99,7 @@ $result = [];
         <div class="ps-slidewrapper">
             <div class="ps-slides">
                 <?php foreach ($categories as $i=>$category) {?>
-                    <div class="bg-<?php echo $i+1;?>">
+                    <div class="bg-<?php echo ($i+1)%5;?>">
                         <i class="material-icons icon-pricing">
                             <?php echo $category->term_font_icon?>
                         </i>

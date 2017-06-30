@@ -30,7 +30,33 @@
                 </div>
             </div>
         </div>
+        <br>
+        <br>
+        <br>
+        <div class="">
+            <?php
+            $categories = get_terms(
+                'category',
+                array('parent' => 0)
+            );
 
+
+            foreach ( $categories as $i=>$category ) {
+                ?>
+
+                    <a href="<?php  echo esc_url( get_category_link( $category->term_id ) );?>" style="color: #ffffff;text-decoration: underline">
+                        <?php echo esc_html( $category->name );?>
+
+                    </a>
+                   <?php if( $i<(count($categories)-1)||$i==0 ){?>
+                    <span style="color: #fff "> ,</span>
+
+            <?php
+            }
+            }
+            ?>
+
+        </div>
 
     </div>
 </div>

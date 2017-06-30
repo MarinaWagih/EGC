@@ -746,16 +746,6 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
     background: #d0af85;
     color: #fff;
 }
-.divide {
-    height: 15px;
-    overflow: hidden;
-    background-color: rgba(224, 224, 224, 0);
-    width: 50px;
-    margin-top: 9px;
-    margin-bottom: 3px;
-    left: 0;
-    position: relative;
-}
 /*======================= error page =========================*/
 /*.home-img{
         margin: 3em 0;

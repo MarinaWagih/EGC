@@ -18,7 +18,7 @@ get_header(); ?>
                     <h1>
                         <a href="<?php echo get_home_url() ?>">
                             <img src="<?php echo get_template_directory_uri() ?>/images/logo-EGC-04.png" alt="fullPage"
-                                 class="logo" class="width-100px"/>
+                                 class="logo width-100px"/>
                         </a>
                     </h1>
                 </div>
@@ -50,13 +50,13 @@ get_header(); ?>
                                                           <?php if(get_post_meta(get_the_ID(),'price_before',true)){ ?>
                                                          <del>
                                                         <span class="block font-12">
-                                                            $<?php echo get_post_meta(get_the_ID(),'price_before',true)?>/ month
+                                                            $<?php echo get_post_meta(get_the_ID(),'price_before',true)?>/ <?php pll_e('month');?>
                                                         </span>
                                                          </del>
                                                          <?php }?>
                                                     <strong class="block font-25 text-blue">
                                                         $<?php echo get_post_meta(get_the_ID(),'price_after',true)?>
-                                                        <span class="text-blue">/ month </span>
+                                                        <span class="text-blue">/ <?php pll_e('month');?> </span>
                                                     </strong>
                                                       </span>
 
@@ -68,7 +68,7 @@ get_header(); ?>
                                               </strong>
                                             </span>
                                             <span class="font-12">
-                                              <span class="block line-height-12"> Download Speed</span>
+                                              <span class="block line-height-12"> <?php pll_e('download_speed');?></span>
                                             </span>
                                                         </div>
                                                     </div>
@@ -78,8 +78,8 @@ get_header(); ?>
                                                            <?php the_excerpt()?>
                                                         </div>
 <!--                                                        <span class="new badge egc">Data Transfer Download 75Gb</span>-->
-                                                        <a class="btn-egc" href="<?php get_permalink(get_the_ID()); ?>">
-                                                            More Details
+                                                        <a class="btn-egc" href="<?php echo get_permalink(get_the_ID()); ?>">
+                                                            <?php pll_e('more_details');?>
                                                         </a>
                                                     </div>
                                                 </div>

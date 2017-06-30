@@ -13,7 +13,8 @@
     </a>
     <!-- Dropdown Structure -->
     <ul id='dropdown1' class='dropdown-content dropdown-menu'>
-        <?php pll_the_languages((array('show_slug'=>1,'show_names'=>0)));?>
+           <?php pll_the_languages( array( 'show_flags' => 1,'show_names' => 0  )); ?>
+
     </ul>
 </div>
 <?php wp_footer();

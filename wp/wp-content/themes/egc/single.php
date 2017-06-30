@@ -20,7 +20,7 @@ if (have_posts()): $i = 0;
 
                         <h1>
                             <a href="<?php echo get_home_url() ?>">
-                                <img src="<?php echo get_template_directory_uri()?>/images/logo-EGC-04.png" alt="fullPage" class="logo" class="width-100px"/>
+                                <img src="<?php echo get_template_directory_uri()?>/images/logo-EGC-04.png" alt="fullPage" class="logo width-100px"/>
                             </a>
                             <a class=" btn white secondary-content waves-effect waves-white btn-egc btn-back"
                                href="<?php echo esc_url($category_link); ?>">
@@ -47,7 +47,7 @@ if (have_posts()): $i = 0;
 
                                             <div class="divider"></div>
                                             <div class="col s12 m8 desc">
-                                                <div class="margin-bottom" style="color: #000000 !important;">
+                                                <div class="margin-bottom" >
                                                     <?php the_content() ?>
                                                 </div>
                                                 <!--                                            <span class="new badge egc">Data Transfer Download 75Gb</span>-->
@@ -58,13 +58,13 @@ if (have_posts()): $i = 0;
                                                        <?php if(get_post_meta(get_the_ID(),'price_before',true)){ ?>
                                                            <del>
                                                         <span class="block font-12">
-                                                            $<?php echo get_post_meta(get_the_ID(),'price_before',true)?>/ month
+                                                            $<?php echo get_post_meta(get_the_ID(),'price_before',true)?>/ <?php pll_e('month');?>
                                                         </span>
                                                            </del>
                                                        <?php }?>
                                                     <strong class="block font-25 text-blue">
                                                         $<?php echo get_post_meta(get_the_ID(),'price_after',true)?>
-                                                        <span class="text-blue">/ month </span>
+                                                        <span class="text-blue">/ <?php pll_e('month');?> </span>
                                                     </strong>
 
                                                 </span>
@@ -77,34 +77,37 @@ if (have_posts()): $i = 0;
                                                             </strong>
                                                           </span>
                                                           <span class="font-12">
-                                                            <span class="block line-height-12"> Download Speed</span>
+                                                            <span class="block line-height-12"> <?php pll_e('download_speed');?></span>
                                                           </span>
                                                     </div>
                                                 </div>
 
                                                 <div class="col s12 m12 bordered side-sec pay-now">
                                                       <span class="title bold">
-                                                        payment
+                                                        <?php pll_e('payment');?>
                                                       </span>
                                                       <div class="divider"></div>
                                                       <span class="">
-                                                        <?php echo do_shortcode('[livesite-pay label="Pay Now" payment_amount="10" title="buy now" class="btn-pay" show_icons]')?>
+                                                        <?php echo do_shortcode('[livesite-pay label="subscribe now" payment_amount="10" title="buy now" class="btn-pay" show_icons]')?>
                                                       </span>
 
                                                 </div>
                                                 <div class="col s12 m12 bordered side-sec">
                                                   <span class="title bold">
-                                                    Tags
+                                                    <?php pll_e('tags');?>
                                                   </span>
                                                     <div class="divider"></div>
                                                     <?php $tags=get_the_tags();
-                                                    foreach($tags as $tag)
+                                                    if($tags)
                                                     {
-                                                        ?>
-                                                        <a href="<?php echo get_tag_link($tag); ?>" class="chip egc-color">
-                                                            <?php echo $tag->name; ?>
-                                                        </a>
-                                                        <?php
+                                                        foreach($tags as $tag)
+                                                        {
+                                                            ?>
+                                                            <a href="<?php echo get_tag_link($tag); ?>" class="chip egc-color">
+                                                                <?php echo $tag->name; ?>
+                                                            </a>
+                                                            <?php
+                                                        }
                                                     }
                                                     ?>
 
@@ -112,7 +115,7 @@ if (have_posts()): $i = 0;
 
                                                 <div class="col s12 m14 bordered side-sec category">
                                                       <span class="title bold">
-                                                        Categories
+                                                        <?php pll_e('categories');?>
                                                       </span>
 
                                                     <div class="divider"></div>
