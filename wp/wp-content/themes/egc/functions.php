@@ -103,7 +103,7 @@ function egc_pre_get_packages( $query ) {
 //    if( isset($query->query_vars['post_type']) &&
 //        $query->query_vars['post_type'] == 'packages' ) {
 
-        $query->set('orderby', 'meta_value');
+        $query->set('orderby', 'meta_value_num');
         $query->set('meta_key', 'speed');
         $query->set('order', 'ASC');
 

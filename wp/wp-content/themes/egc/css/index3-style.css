@@ -884,3 +884,7 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 .padding-bottom-none{
     padding-bottom: 0 !important;
 }
+.tabs .tab {
+
+     text-transform: none !important;
+}

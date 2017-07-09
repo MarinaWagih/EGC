@@ -8,7 +8,17 @@
  */
 
 get_header(); ?>
+    <div>
+        <pre>
+            <?php $cat=get_queried_object();
+//            var_dump($cat);
+            $term_id = $cat->term_id;
+            $taxonomy_name = $cat->taxonomy;
+            $termchildren = get_term_children( $term_id, $taxonomy_name );
 
+            ?>
+        </pre>
+    </div>
     <div class="desc-page">
         <div class="section" id="packages">
             <section id="ps-container" class="ps-container">
@@ -30,65 +40,66 @@ get_header(); ?>
                         <h2><?php the_archive_title() ?></h2>
 
                         <div class="row">
+                            <?php if($cat->parent!=0){?>
                             <div id="test1" class="" data-indicators="true">
                                 <?php
                                 if (have_posts()): $i = 0;
                                     while (have_posts()): the_post();
 
-                                        ?>
-
-
-                                            <div class=" ">
-                                                <div class="col s12 m12 bordered padding-15">
-                                                  <span class="title bold">
-                                                      <?php the_title() ?>
-                                                  </span>
-
-                                                    <div class="divider"></div>
-                                                    <div class="col s12 m4 ps-price">
-                                                      <span class="col s6 m12 font-12 min-height-80px <?php echo (get_post_meta(get_the_ID(),'price_before',true))?"":"vertical-align" ?>">
-                                                          <?php if(get_post_meta(get_the_ID(),'price_before',true)){ ?>
-                                                         <del>
-                                                            <span class="block font-12">
-                                                                $<?php echo get_post_meta(get_the_ID(),'price_before',true)?>/ <?php pll_e('month');?>
-                                                            </span>
-                                                         </del>
-                                                         <?php }?>
-                                                    <strong class="block font-25 text-blue">
-                                                        $<?php echo get_post_meta(get_the_ID(),'price_after',true)?>
-                                                        <span class="text-blue">/ <?php pll_e('month');?> </span>
-                                                    </strong>
-                                                      </span>
-
-                                                        <div class="col s6 m12 ps-price speed border-top">
-                                            <span class="number-big">
-                                                <?php echo get_post_meta(get_the_ID(),'speed',true)?>
-                                              <strong class=" font-25 line-height">
-                                                  Mbps
-                                              </strong>
-                                            </span>
-                                            <span class="font-12">
-                                              <span class="block line-height-12"> <?php pll_e('download_speed');?></span>
-                                            </span>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col s12 m8 desc">
-                                                        <div class="margin-bottom">
-                                                           <?php the_excerpt()?>
-                                                        </div>
-<!--                                                        <span class="new badge egc">Data Transfer Download 75Gb</span>-->
-                                                        <a class="btn-egc" href="<?php echo get_permalink(get_the_ID()); ?>">
-                                                            <?php pll_e('more_details');?>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                <?php
+                                        get_template_part( 'template', 'archive_list' );
                                         $i++;
                                     endwhile;
                                 endif; ?>
                             </div>
+                            <?php
+                            }else{
+                                ?>
+                                <div class="row">
+                                    <div class="col s12">
+                                        <ul class="tabs">
+                                          <?php
+                                            $terms=[];
+                                            foreach ( $termchildren as $child )
+                                            {
+                                                $term = get_term_by( 'id', $child, $taxonomy_name );
+                                                $terms[]=$term;
+                                                    ?>
+                                                  <li class="tab col s4">
+                                                      <a href="#<?=$term->slug?>"><?=$term->name?></a>
+                                                  </li>
+
+                                                <?php
+                                                }
+                                               ?>
+                                        </ul>
+                                    </div>
+                                    <?php  foreach ( $terms as $term ) {?>
+                                        <div id="<?=$term->slug?>" class="col s12">
+                                            <?php
+                                            $args = array(
+                                                                'post_type' => 'packages',
+                                                               'cat' => $term->term_id
+                                                               );
+
+                                             $packages= new WP_Query( $args );
+                                            if ($packages->have_posts()):
+                                              while ($packages->have_posts()):$packages->the_post();
+                                                  get_template_part( 'template', 'archive_list' );
+                                              endwhile;
+                                            endif;
+                                                  ?>
+
+                                        </div>
+                                    <?php
+
+                                    }
+                                    ?>
+
+
+                                </div>
+    `                       <?php
+                            }
+                            ?>
                         </div>
 
                     </div>
