@@ -33,7 +33,10 @@ function egc_script_enqueue()
     wp_enqueue_script('slick','https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js',[],'3.2.0',true);
     wp_enqueue_script('materialize_js','https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js',[],'3.2.0',true);
     wp_enqueue_script('typed_js',get_template_directory_uri().'/js/typed.min.js',[],'',true);
+
+    wp_enqueue_script('scrollflow_js',get_template_directory_uri().'/js/scrollflow.js',[],'',true);
     wp_enqueue_script('fullPage_js',get_template_directory_uri().'/js/jquery.fullPage.min.js',[],'',true);
+
     wp_enqueue_script('modernizr_js',get_template_directory_uri().'/js/modernizr.custom.79639.js',[],'',true);
     wp_enqueue_script('slider_js',get_template_directory_uri().'/js/slider.js',[],'',true);
     wp_enqueue_script('index_js',get_template_directory_uri().'/js/index.js',[],'',true);
@@ -69,8 +72,8 @@ function egc_my_pll_get_post_types($types) {
 add_filter('pll_get_post_types', 'egc_my_pll_get_post_types');
 //
 pll_register_string('egc','egc_slogan','egc');
-pll_register_string('egc','about_title','egc');
-pll_register_string('egc','about_content','egc',true);
+//pll_register_string('egc','about_title','egc');
+//pll_register_string('egc','about_content','egc',true);
 pll_register_string('egc','contact_us_title','egc');
 pll_register_string('egc','phones','egc');
 pll_register_string('egc','address','egc');

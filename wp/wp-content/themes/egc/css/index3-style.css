@@ -22,8 +22,8 @@ address,caption,cite,code,dfn,em,strong,th,var {
 strong{
 	font-weight: bold;
 }
-ol,ul {
-    list-style: none;
+ol,ul,li {
+    list-style:none;
     margin:0;
     padding:0;
 }
@@ -184,6 +184,9 @@ h1{
     margin: auto;
     text-align: center;
 }
+#about .content-after-particles{
+    min-height: 80%;
+}
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
     /*background: #eac67a;*/
     background: #ecd7b6;
@@ -194,10 +197,15 @@ h1{
 #about h1{
     color:#fff ;
 }
-#about p{
-    font-size: 22px;
-}
+#about .align-left{
 
+    font-size: 15px;
+    text-align: left;
+}
+#about .align-left ol,ul,li {
+    list-style: circle !important ;
+
+}
 
 /*==================cards style=============*/
 
@@ -706,7 +714,7 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
     color:#fff;
 }
 .detail-page .title.bold{
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
 }
 .detail-page .side-sec{
     margin-top: 20px;
@@ -812,7 +820,7 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
   border: 2px solid white;
   text-decoration: none;
   padding: 15px;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   color: white;
   border-radius: 26px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -861,4 +869,18 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
     display: inline-flex;
     align-items: center;
 }
-
+#home{
+    min-height: 100vh !important;
+}
+.display-non{
+    display: none;
+}
+/*.overflowscroll{*/
+    /*overflow-y: scroll !important;*/
+/*}*/
+.list-category li{
+    list-style: none !important;
+}
+.padding-bottom-none{
+    padding-bottom: 0 !important;
+}

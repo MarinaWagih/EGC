@@ -6,7 +6,7 @@
  * Time: 8:12 PM
  */
 ?>
-<div class="section" id="contact">
+<div class="section display-non" id="contact">
     <div class="row">
         <div class="col s12 m12">
             <div class="col s12 m3 image-about"></div>

@@ -10,7 +10,7 @@ $categories = get_terms(
     array('parent' => 0)
 );
 ?>
-<div class="section" id="packages">
+<div class="section display-non" id="packages">
     <section id="ps-container" class="ps-container">
 
         <div class="ps-header">

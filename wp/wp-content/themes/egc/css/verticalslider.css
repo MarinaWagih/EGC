@@ -15,7 +15,7 @@
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	color: #555;
 	background: #fff;
 }
@@ -272,6 +272,7 @@
   text-align: center;
   font-weight: 300;
   display: block;
+  font-size: medium;
 }
 .divider {
     height: 2px;
