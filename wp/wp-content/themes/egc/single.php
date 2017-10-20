@@ -121,9 +121,10 @@ if (have_posts()): $i = 0;
                                                     <div class="divider"></div>
                                                     <ul class="list-category">
                                                         <?php
-                                                        $categories = get_categories( array(
-                                                            'orderby' => 'name',
-                                                        ) );
+                                                        $categories = get_terms(
+                                                            'category',
+                                                            array('parent' => 0)
+                                                        );
 
                                                         foreach ( $categories as $category ) {
                                                             ?>

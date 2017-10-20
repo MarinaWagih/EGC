@@ -18,8 +18,13 @@ $post=get_post($post_id);
         <i class="icon fa fa-4x fa-info-circle"></i>
         <h1><?php echo $post->post_title;?></h1>
         <div class="divider-about"></div>
-        <div class="align-left overflowscroll">
+        <div class="align-left overflow-hidden">
             <?php echo $post->post_content;?>
         </div>
+        <div class="_3dots"></div>
+        <a href="<?php echo get_page_link($post_id); ?>" class="right  more-text">
+            <?php pll_e('more_details');?>
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </a>
     </div>
 </div>

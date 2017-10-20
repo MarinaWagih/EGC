@@ -9,7 +9,9 @@
 <div class="section display-non" id="contact">
     <div class="row">
         <div class="col s12 m12">
-            <div class="col s12 m3 image-about"></div>
+            <div class="col s12 m3 image-about">
+                <div class="overlay-contact"></div>
+            </div>
             <div class="col s12 m9 contact-data">
                 <div class="title-contact">
                     <i class="material-icons font-45 icon-egc">person_pin</i>

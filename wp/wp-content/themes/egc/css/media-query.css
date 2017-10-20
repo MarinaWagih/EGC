@@ -242,7 +242,6 @@
 }
 	.js .ps-content a:last-child {
 		font-size: 13px;
-		margin: 0px 20px 0 0;
 	}
 }
 
@@ -347,8 +346,8 @@
       border-top: 2px solid #f2f2f2;
   }*/
   .col.s12.m12.bordered {
-      padding-top: 30px;
-      padding-bottom: 30px;
+      padding-top: 10px;
+      padding-bottom: 10px;
   }
 }
 
@@ -388,7 +387,7 @@
   }
   .js .ps-content a:last-child {
     font-size: 18px !important;
-    margin: 0px 20px 0 0;
+    /*margin: 0px 20px 0 0;*/
 }
   .ps-content .ps-price {
       font-size: inherit;
@@ -811,7 +810,7 @@
   }
   .col.s12.m12.bordered {
     padding-top: 10px;
-    padding-bottom: 35px;
+    padding-bottom: 10px;
   }
   .ps-content .ps-price {
     font-size: 12px;

@@ -64,7 +64,7 @@ get_header(); ?>
                                                 $term = get_term_by( 'id', $child, $taxonomy_name );
                                                 $terms[]=$term;
                                                     ?>
-                                                  <li class="tab col s4">
+                                                  <li class="tab col s3">
                                                       <a href="#<?=$term->slug?>"><?=$term->name?></a>
                                                   </li>
 
@@ -76,18 +76,70 @@ get_header(); ?>
                                     <?php  foreach ( $terms as $term ) {?>
                                         <div id="<?=$term->slug?>" class="col s12">
                                             <?php
-                                            $args = array(
-                                                                'post_type' => 'packages',
-                                                               'cat' => $term->term_id
-                                                               );
+                                            /**
+                                             * children of children
+                                            **/
+                                            $children = get_terms( $term->taxonomy, array(
+                                                'parent'    => $term->term_id,
+                                                'hide_empty' => false
+                                            ) );
+                                            if(count($children)>0)
+                                            {
 
-                                             $packages= new WP_Query( $args );
-                                            if ($packages->have_posts()):
-                                              while ($packages->have_posts()):$packages->the_post();
-                                                  get_template_part( 'template', 'archive_list' );
-                                              endwhile;
-                                            endif;
-                                                  ?>
+                                                $termchildren_1 = $children;
+                                            ?>
+
+                                                <div class="col s12">
+                                                    <ul class="tabs">
+                                                        <?php
+                                                        foreach ( $termchildren_1 as $child )
+                                                        {
+                                                            ?>
+                                                            <li class="tab col s6">
+                                                                <a href="#<?=$child->slug?>"><?=$child->name?></a>
+                                                            </li>
+
+                                                        <?php
+                                                        }
+                                                        ?>
+                                                    </ul>
+                                                </div>
+
+
+                                                <?php
+                                                foreach($termchildren_1 as $grandchild)
+                                                {
+                                                 ?>
+                                                <div id="<?=$grandchild->slug?>" class="col s12">
+                                                        <?php
+                                                        $args = array(
+                                                            'post_type' => 'packages',
+                                                            'cat' => $grandchild->term_id
+                                                        );
+
+                                                        $packages = new WP_Query($args);
+                                                        if ($packages->have_posts()):
+                                                            while ($packages->have_posts()):$packages->the_post();
+                                                                get_template_part('template', 'archive_list');
+                                                            endwhile;
+                                                        endif;
+                                                        ?>
+                                                    </div>
+                                                <?php
+                                                }
+                                            }else {
+                                                $args = array(
+                                                    'post_type' => 'packages',
+                                                    'cat' => $term->term_id
+                                                );
+
+                                                $packages = new WP_Query($args);
+                                                if ($packages->have_posts()):
+                                                    while ($packages->have_posts()):$packages->the_post();
+                                                        get_template_part('template', 'archive_list');
+                                                    endwhile;
+                                                endif;
+                                            }  ?>
 
                                         </div>
                                     <?php

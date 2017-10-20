@@ -44,6 +44,8 @@
         <div class="col s12 m8 desc">
             <div class="margin-bottom">
                 <?php the_excerpt()?>
+                <br>
+                <?php the_category(',')?>
             </div>
             <!--                                                        <span class="new badge egc">Data Transfer Download 75Gb</span>-->
             <a class="btn-egc" href="<?php echo get_permalink(get_the_ID()); ?>">
